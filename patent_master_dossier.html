@@ -6,37 +6,27 @@
   <title>Patent Master Dossier</title>
   <meta name="robots" content="index, follow">
   <style>
-    :root {
-      --bg: #0b1218;
-      --panel: #111b23;
-      --line: #243543;
-      --text: #eaf1f5;
-      --muted: #9eb1bf;
-      --accent: #98cad8;
-      --link: #b8dde7;
-      --code: #16242f;
-      --max: 980px;
-    }
+    :root { --bg:#f3efe8; --panel:#fffdf9; --line:#d9d2c7; --text:#1f2328; --muted:#5f6770; --link:#385a74; --code:#f2eee7; --max:980px; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: linear-gradient(180deg, #071017, #0b1218); color: var(--text); font: 16px/1.65 "IBM Plex Sans", system-ui, sans-serif; }
+    body { margin: 0; background: linear-gradient(180deg,#f8f5ef,#f1ece3); color: var(--text); font: 16px/1.7 "IBM Plex Sans", system-ui, sans-serif; }
     .shell { width: min(100%, var(--max)); margin: 0 auto; padding: 32px 20px 80px; }
-    .top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(11,18,24,0.84); border-bottom: 1px solid rgba(152,202,216,0.12); }
+    .top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); background: rgba(248,245,239,0.92); border-bottom: 1px solid rgba(31,35,40,0.08); }
     .top-inner { width: min(100%, var(--max)); margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .brand { font-weight: 600; letter-spacing: 0.02em; }
+    .brand { font-weight: 600; letter-spacing: 0.02em; color:#20242a; }
     .nav a { color: var(--muted); text-decoration: none; margin-left: 18px; }
     .nav a:hover { color: var(--text); }
-    .doc { background: rgba(17,27,35,0.72); border: 1px solid rgba(152,202,216,0.10); border-radius: 24px; padding: 34px; box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
-    h1, h2, h3, h4 { font-family: Georgia, serif; line-height: 1.12; letter-spacing: -0.02em; margin: 1.2em 0 0.5em; }
+    .doc { background: var(--panel); border: 1px solid rgba(31,35,40,0.08); border-radius: 24px; padding: 34px; box-shadow: 0 18px 40px rgba(37,31,24,0.08); }
+    h1, h2, h3, h4 { font-family: Georgia, serif; line-height: 1.12; letter-spacing: -0.02em; margin: 1.2em 0 0.5em; color:#171b20; }
     h1 { margin-top: 0; font-size: clamp(2.2rem, 5vw, 3.6rem); }
-    h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); padding-top: 0.3em; border-top: 1px solid rgba(152,202,216,0.10); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); padding-top: 0.3em; border-top: 1px solid rgba(31,35,40,0.08); }
     h3 { font-size: 1.18rem; }
     p, li { color: var(--text-muted, var(--muted)); }
     a { color: var(--link); }
     ul, ol { padding-left: 1.35rem; }
     li + li { margin-top: 0.45rem; }
     code { background: var(--code); padding: 0.12rem 0.35rem; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.94em; }
-    pre { background: var(--code); padding: 18px; border-radius: 16px; overflow: auto; border: 1px solid rgba(152,202,216,0.10); }
+    pre { background: var(--code); padding: 18px; border-radius: 16px; overflow: auto; border: 1px solid rgba(31,35,40,0.08); }
     pre code { background: transparent; padding: 0; }
     .lede { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
     @media (max-width: 720px) {
@@ -51,7 +41,7 @@
     <div class="top-inner">
       <div class="brand">Deterministic Gather Patent Materials</div>
       <nav class="nav">
-        <a href="./index.html">Site</a>
+        <a href="./index.html">HOME</a>
       </nav>
     </div>
   </header>
@@ -629,7 +619,7 @@
 <li>A hardware-oriented claim directed to an accelerator, system-on-chip, or hardware-implemented gather engine may be added in a later complete-specification or foreign filing set if hardware portfolio coverage is desired.</li>
 </ul>
 <h2>Part III: Patent Drawing Instruction Pack</h2>
-<h1>Patent Drawing Instruction Pack</h1>
+<h2>Patent Drawing Instruction Pack</h2>
 <p>Project: Deterministic Gather of Hierarchically Managed Key-Value State for Neural Network Inference</p>
 <p>Purpose: This document is intended for a patent illustrator or draftsperson preparing formal black-and-white patent drawings corresponding to the provisional specification.</p>
 <p>General drafting instructions:</p>
