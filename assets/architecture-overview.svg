@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" rx="36" fill="#0A1219"/>
+  <rect x="40" y="40" width="1520" height="820" rx="28" fill="#0D1821" stroke="#253847"/>
+  <text x="90" y="110" fill="#EAF2F6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="42" font-weight="600">Architecture Overview</text>
+  <text x="90" y="150" fill="#8FA6B6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Control-plane resolution, gather-plan compilation, and execution-ready output generation</text>
+
+  <rect x="90" y="220" width="420" height="500" rx="24" fill="#111E29" stroke="#2E4555"/>
+  <text x="120" y="270" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="600">Control Plane</text>
+  <rect x="120" y="300" width="360" height="72" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="145" y="344" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Hierarchical Metadata Manager</text>
+  <rect x="120" y="392" width="360" height="72" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="145" y="436" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Prefix / Branch Ownership</text>
+  <rect x="120" y="484" width="360" height="72" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="145" y="528" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Residency Controller</text>
+  <rect x="120" y="576" width="360" height="72" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="145" y="620" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Representation Manager</text>
+
+  <rect x="590" y="210" width="430" height="520" rx="28" fill="#101D28" stroke="#4B6E80"/>
+  <text x="625" y="270" fill="#C1E0E8" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="600">Deterministic Gather Engine</text>
+  <rect x="625" y="310" width="360" height="76" rx="16" fill="#152431" stroke="#4A7080"/>
+  <text x="650" y="340" fill="#9EC2CF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Resolve logical request</text>
+  <text x="650" y="364" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Bind sources and epochs</text>
+  <rect x="625" y="412" width="360" height="76" rx="16" fill="#152431" stroke="#4A7080"/>
+  <text x="650" y="442" fill="#9EC2CF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Select transform path</text>
+  <text x="650" y="466" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Compile gather plan</text>
+  <rect x="625" y="514" width="360" height="76" rx="16" fill="#152431" stroke="#4A7080"/>
+  <text x="650" y="544" fill="#9EC2CF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Overlap retrieval and staging</text>
+  <text x="650" y="568" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Emit execution-ready artifact</text>
+  <rect x="625" y="616" width="360" height="76" rx="16" fill="#0F2430" stroke="#6AA5B7"/>
+  <text x="650" y="646" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Output forms</text>
+  <text x="650" y="670" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Tiles • Streams • DMA • Commands</text>
+
+  <rect x="1100" y="220" width="410" height="500" rx="24" fill="#111E29" stroke="#2E4555"/>
+  <text x="1130" y="270" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="20" font-weight="600">Data / Compute Plane</text>
+  <rect x="1130" y="300" width="350" height="70" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="1155" y="344" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Hot Tier  SRAM / Local Memory</text>
+  <rect x="1130" y="392" width="350" height="70" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="1155" y="436" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Warm Tier  HBM / Device Memory</text>
+  <rect x="1130" y="484" width="350" height="70" rx="16" fill="#152431" stroke="#355062"/>
+  <text x="1155" y="528" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Cold Tier  Host / External</text>
+  <rect x="1130" y="590" width="350" height="90" rx="18" fill="#0F2430" stroke="#6AA5B7"/>
+  <text x="1155" y="628" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Compute Interface</text>
+  <text x="1155" y="658" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24">Attention / Compute Execution</text>
+
+  <path d="M510 338H575" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M510 430H575" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M510 522H575" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M510 614H575" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1020 350H1085" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1020 442H1085" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1020 534H1085" stroke="#7FB8C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1020 652H1085" stroke="#9FD1DF" stroke-width="4" stroke-linecap="round"/>
+</svg>

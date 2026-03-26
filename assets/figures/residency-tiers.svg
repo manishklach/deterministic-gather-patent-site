@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" fill="none">
+  <rect width="1400" height="820" rx="32" fill="#0A1219"/>
+  <rect x="44" y="44" width="1312" height="732" rx="26" fill="#0D1821" stroke="#253847"/>
+  <text x="88" y="112" fill="#EAF2F6" font-family="IBM Plex Sans, Arial, sans-serif" font-size="36" font-weight="600">Residency and Tier Placement</text>
+  <rect x="110" y="220" width="320" height="360" rx="24" fill="#102633" stroke="#6AA5B7"/>
+  <text x="150" y="280" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="600">Hot Tier</text>
+  <text x="150" y="325" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="30">SRAM / Local Memory</text>
+  <text x="150" y="380" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Pinned tails</text>
+  <text x="150" y="418" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Gather-critical windows</text>
+  <rect x="540" y="220" width="320" height="360" rx="24" fill="#111E29" stroke="#4B6E80"/>
+  <text x="580" y="280" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="600">Warm Tier</text>
+  <text x="580" y="325" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="30">HBM / Device Memory</text>
+  <text x="580" y="380" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Shared prefixes</text>
+  <text x="580" y="418" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Reusable working form</text>
+  <rect x="970" y="220" width="320" height="360" rx="24" fill="#131E27" stroke="#355062"/>
+  <text x="1010" y="280" fill="#A8D1DB" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="600">Cold Tier</text>
+  <text x="1010" y="325" fill="#F2F7FA" font-family="IBM Plex Sans, Arial, sans-serif" font-size="30">Host / External Memory</text>
+  <text x="1010" y="380" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Compressed history</text>
+  <text x="1010" y="418" fill="#A7BAC7" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22">Suspend / resume backing</text>
+  <path d="M430 400H520" stroke="#7FB8C5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M860 400H950" stroke="#7FB8C5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M860 470H950" stroke="#9FD1DF" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 12"/>
+  <text x="470" y="382" fill="#9EC2CF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Promote / demote</text>
+  <text x="900" y="452" fill="#9EC2CF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="18">Transform / restore</text>
+</svg>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplementary Figures</title>
+  <style>
+    :root { --bg:#08121a; --panel:#0f1b25; --line:#28404f; --text:#edf4f8; --muted:#9fb2bf; --accent:#9fd1df; }
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#061019,#08121a);color:var(--text);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif;padding:40px 20px}
+    .shell{max-width:1100px;margin:0 auto} h1{margin:0 0 10px;font:600 42px/1.05 Georgia,serif} p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:28px}
+    .card{display:block;padding:18px;border:1px solid var(--line);border-radius:22px;background:var(--panel);text-decoration:none;color:inherit}
+    .card img{width:100%;border-radius:14px;border:1px solid var(--line);background:#0b141b;margin-bottom:14px}
+    .type{color:var(--accent);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+    h2{margin:8px 0 10px;font-size:1.1rem} a:hover{transform:translateY(-1px)}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <p class="type">Supplementary Figure Set</p>
+    <h1>Additional schematic views</h1>
+    <p>Supplementary diagrams associated with deterministic gather, shared-prefix ownership, and residency-first tier placement.</p>
+    <div class="grid">
+      <a class="card" href="../architecture-overview.svg">
+        <span class="type">Figure</span>
+        <h2>Architecture Overview</h2>
+        <img src="../architecture-overview.svg" alt="Architecture overview">
+        <p>Control-plane resolution, gather-plan compilation, and execution-ready output generation.</p>
+      </a>
+      <a class="card" href="../gather-flow.svg">
+        <span class="type">Figure</span>
+        <h2>Gather Flow</h2>
+        <img src="../gather-flow.svg" alt="Gather flow">
+        <p>Stepwise view from logical request through compute consumption.</p>
+      </a>
+      <a class="card" href="./prefix-dag.svg">
+        <span class="type">Figure</span>
+        <h2>Prefix / Branch Ownership</h2>
+        <img src="./prefix-dag.svg" alt="Prefix branch ownership diagram">
+        <p>Shared prefix lineage and branch-local suffix ownership schematic.</p>
+      </a>
+      <a class="card" href="./residency-tiers.svg">
+        <span class="type">Figure</span>
+        <h2>Residency and Tier Placement</h2>
+        <img src="./residency-tiers.svg" alt="Residency tiers diagram">
+        <p>Hot, warm, and cold tier placement with promotion and restoration paths.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

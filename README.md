@@ -1,4 +1,4 @@
-﻿# Patent Publication Companion Site
+# Patent Publication Companion Site
 
 This repository contains a plain HTML, CSS, and JavaScript GitHub Pages site for a patent publication companion page centered on deterministic gather over logically managed live inference state.
 
@@ -21,10 +21,10 @@ Expected asset paths:
 
 ```text
 /assets/patent.pdf
-/assets/architecture-overview.png
-/assets/gather-flow.png
+/assets/architecture-overview.svg
+/assets/gather-flow.svg
 /assets/figures/...
-/assets/favicon.png
+/assets/favicon.svg
 ```
 
 ## What the Site Presents
@@ -80,18 +80,18 @@ Place the real publication files here:
 ```text
 /assets
   patent.pdf
-  architecture-overview.png
-  gather-flow.png
-  favicon.png
+  architecture-overview.svg
+  gather-flow.svg
+  favicon.svg
   /figures
 ```
 
 Recommended usage:
 
 - `patent.pdf`: published patent or published application PDF
-- `architecture-overview.png`: primary architecture figure
-- `gather-flow.png`: execution flow or gather-path figure
-- `favicon.png`: small square favicon
+- `architecture-overview.svg`: primary architecture figure
+- `gather-flow.svg`: execution flow or gather-path figure
+- `favicon.svg`: small square favicon
 - `figures/`: supplemental figure set
 
 ## GitHub Pages Deployment
@@ -140,8 +140,8 @@ If you later change the domain or move the repo, update:
 Update these links in `index.html` as needed:
 
 - `./assets/patent.pdf`
-- `./assets/architecture-overview.png`
-- `./assets/gather-flow.png`
+- `./assets/architecture-overview.svg`
+- `./assets/gather-flow.svg`
 - `./assets/figures/`
 - repository URLs
 
@@ -200,4 +200,5 @@ It is deliberately not:
 - a pricing page
 - a generic portfolio
 - a marketing-heavy product site
+
 
