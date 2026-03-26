@@ -20,7 +20,6 @@ The site is intentionally restrained and technical. It is designed to read like 
 Expected asset paths:
 
 ```text
-/assets/patent.pdf
 /assets/architecture-overview.svg
 /assets/gather-flow.svg
 /assets/figures/...
@@ -64,22 +63,12 @@ Suggested edits:
 
 ## Contact Placeholder Editing
 
-The contact section uses deliberate editable placeholders instead of fake live data.
-
-In `index.html`, replace:
-
-- `[professional-email@example.com]`
-- `[GitHub repository link]`
-
-The contact section is intentionally presented as a professional reference block rather than a call-to-action panel.
-
 ## Asset Placement
 
 Place the real publication files here:
 
 ```text
 /assets
-  patent.pdf
   architecture-overview.svg
   gather-flow.svg
   favicon.svg
@@ -88,11 +77,19 @@ Place the real publication files here:
 
 Recommended usage:
 
-- `patent.pdf`: published patent or published application PDF
 - `architecture-overview.svg`: primary architecture figure
 - `gather-flow.svg`: execution flow or gather-path figure
 - `favicon.svg`: small square favicon
 - `figures/`: supplemental figure set
+
+## Browser-Friendly Patent Documents
+
+The repository also includes generated HTML document views for the core patent materials:
+
+- `patent_master_dossier.html`
+- `patent_drawing_instruction_pack.html`
+
+These are intended to provide cleaner browser presentation than a placeholder PDF link.
 
 ## GitHub Pages Deployment
 
@@ -139,10 +136,11 @@ If you later change the domain or move the repo, update:
 
 Update these links in `index.html` as needed:
 
-- `./assets/patent.pdf`
+- `./patent_master_dossier.html`
+- `./patent_drawing_instruction_pack.html`
 - `./assets/architecture-overview.svg`
 - `./assets/gather-flow.svg`
-- `./assets/figures/`
+- `./assets/figures/index.html`
 - repository URLs
 
 ### Typography and color system

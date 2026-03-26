@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patent Drawing Instruction Pack</title>
+  <meta name="robots" content="index, follow">
+  <style>
+    :root {
+      --bg: #0b1218;
+      --panel: #111b23;
+      --line: #243543;
+      --text: #eaf1f5;
+      --muted: #9eb1bf;
+      --accent: #98cad8;
+      --link: #b8dde7;
+      --code: #16242f;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: linear-gradient(180deg, #071017, #0b1218); color: var(--text); font: 16px/1.65 "IBM Plex Sans", system-ui, sans-serif; }
+    .shell { width: min(100%, var(--max)); margin: 0 auto; padding: 32px 20px 80px; }
+    .top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(11,18,24,0.84); border-bottom: 1px solid rgba(152,202,216,0.12); }
+    .top-inner { width: min(100%, var(--max)); margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 600; letter-spacing: 0.02em; }
+    .nav a { color: var(--muted); text-decoration: none; margin-left: 18px; }
+    .nav a:hover { color: var(--text); }
+    .doc { background: rgba(17,27,35,0.72); border: 1px solid rgba(152,202,216,0.10); border-radius: 24px; padding: 34px; box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
+    h1, h2, h3, h4 { font-family: Georgia, serif; line-height: 1.12; letter-spacing: -0.02em; margin: 1.2em 0 0.5em; }
+    h1 { margin-top: 0; font-size: clamp(2.2rem, 5vw, 3.6rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); padding-top: 0.3em; border-top: 1px solid rgba(152,202,216,0.10); }
+    h3 { font-size: 1.18rem; }
+    p, li { color: var(--text-muted, var(--muted)); }
+    a { color: var(--link); }
+    ul, ol { padding-left: 1.35rem; }
+    li + li { margin-top: 0.45rem; }
+    code { background: var(--code); padding: 0.12rem 0.35rem; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.94em; }
+    pre { background: var(--code); padding: 18px; border-radius: 16px; overflow: auto; border: 1px solid rgba(152,202,216,0.10); }
+    pre code { background: transparent; padding: 0; }
+    .lede { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
+    @media (max-width: 720px) {
+      .top-inner { flex-direction: column; align-items: flex-start; }
+      .nav a { margin: 0 16px 0 0; }
+      .doc { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">Deterministic Gather Patent Materials</div>
+      <nav class="nav">
+        <a href="./index.html">Site</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <article class="doc">
+      <h1>Patent Drawing Instruction Pack</h1>
+      <p class="lede">Browser-friendly technical document view generated from the repository markdown source.</p>
+      <h1>Patent Drawing Instruction Pack</h1>
+<p>Project: Deterministic Gather of Hierarchically Managed Key-Value State for Neural Network Inference</p>
+<p>Purpose: This document is intended for a patent illustrator or draftsperson preparing formal black-and-white patent drawings corresponding to the provisional specification.</p>
+<p>General drafting instructions:</p>
+<ul>
+<li>Use conventional patent drawing style only.</li>
+<li>No color, shading only if required for clarity and acceptable under patent drawing practice.</li>
+<li>Use consistent reference numerals across figures.</li>
+<li>Use simple block-diagram, flowchart, timing-diagram, and structural-diagram conventions.</li>
+<li>Use clean labels and avoid marketing language.</li>
+<li>Use the same reference numeral for the same element wherever repeated.</li>
+<li>Show functional relationships clearly, but do not overload a figure with unnecessary implementation detail.</li>
+<li>Where possible, group related control-plane elements separately from compute-plane elements.</li>
+<li>Depict optional elements with dashed boxes or dashed lines.</li>
+</ul>
+<p>Recommended core reference numerals:</p>
+<ul>
+<li>100 overall inference system</li>
+<li>102 runtime scheduler</li>
+<li>104 deterministic gather engine</li>
+<li>106 hierarchical metadata manager</li>
+<li>108 prefix sharing / DAG manager</li>
+<li>110 residency controller</li>
+<li>112 compression and representation manager</li>
+<li>114 allocator / compaction manager</li>
+<li>116 distributed ownership manager</li>
+<li>118 compute interface</li>
+<li>120 attention / compute unit</li>
+<li>122 hot memory tier</li>
+<li>124 warm memory tier</li>
+<li>126 cold memory tier</li>
+<li>128 remote device or remote node</li>
+<li>130 logical KV object</li>
+<li>132 source descriptor</li>
+<li>134 representation descriptor</li>
+<li>136 gather plan</li>
+<li>138 gather template</li>
+<li>140 epoch transition record</li>
+<li>142 distributed ownership record</li>
+<li>144 shared prefix node</li>
+<li>146 branch-local suffix node</li>
+<li>148 execution-ready tile</li>
+<li>150 descriptor-form execution artifact</li>
+<li>152 DMA chain / command chain</li>
+<li>154 stream descriptor set</li>
+<li>156 hardware front-end command structure</li>
+</ul>
+<h2>Figure 1: Deterministic Gather-Centric System Architecture</h2>
+<p>Figure type:</p>
+<ul>
+<li>High-level system block diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show overall system 100.</li>
+<li>Show scheduler 102, gather engine 104, metadata manager 106, prefix sharing manager 108, residency controller 110, representation manager 112, allocator / compaction manager 114, optional distributed ownership manager 116, compute interface 118, and compute unit 120.</li>
+<li>Show hot tier 122, warm tier 124, and cold tier 126 coupled to gather engine 104.</li>
+<li>Show control-plane relationship from 102/106/108/110/112/114/116 to gather engine 104.</li>
+<li>Show data-plane output from gather engine 104 to compute interface 118 and compute unit 120.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Visually separate control plane and compute plane, preferably by dotted boundary or labeled regions.</li>
+</ul>
+<h2>Figure 2: Logical Namespace and Shared Lineage Structure</h2>
+<p>Figure type:</p>
+<ul>
+<li>Structural lineage diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show model root and one or more shared prefix nodes 144.</li>
+<li>Show descendant session branches and branch-local suffix nodes 146.</li>
+<li>Show that multiple sessions reference the same shared prefix node.</li>
+<li>Show logical KV objects 130 attached to shared and branch-local nodes.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should communicate logical sharing, not physical placement.</li>
+</ul>
+<h2>Figure 3: Metadata Mapping Entry and Epoch Fields</h2>
+<p>Figure type:</p>
+<ul>
+<li>Structured record / table diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show a representative metadata mapping entry.</li>
+<li>Include logical object identifier, current epoch, prior draining epoch, source descriptor pointer, representation descriptor pointer, tier bitmap, pin count, reservation count, migration state, and ownership state.</li>
+<li>Show relation from metadata mapping entry to source descriptor 132, representation descriptor 134, and epoch transition record 140.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This should read like an architectural data structure figure, not source code.</li>
+</ul>
+<h2>Figure 4: Epoch Commit and Reader Drain Timeline</h2>
+<p>Figure type:</p>
+<ul>
+<li>Timing diagram or sequence diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show old source, new source, metadata manager, and gather reader activity.</li>
+<li>Show preparation of new source, publication of next source descriptor, epoch commit, use of old source by prior readers, use of new source by later readers, drain condition, and reclamation.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Make clear that logical identity is preserved while physical source changes.</li>
+</ul>
+<h2>Figure 5: Gather-Plan Compilation Pipeline</h2>
+<p>Figure type:</p>
+<ul>
+<li>Functional flow diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show input logical access request.</li>
+<li>Show logical expansion, source binding, transform-path selection, template match or synthesis, overlap scheduling, and execution-ready emission.</li>
+<li>Show output as either execution-ready tile 148 or descriptor-form artifact 150.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This is one of the central figures and should highlight deterministic gather as the main operational path.</li>
+</ul>
+<h2>Figure 6: Reusable Gather Template Structure</h2>
+<p>Figure type:</p>
+<ul>
+<li>Structural block diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show gather template 138 with abstract segment slots.</li>
+<li>Show associated transform classes, output layout contract, and source rebinding table.</li>
+<li>Show validation against epoch compatibility rules.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Make clear that the template is reusable across recurrent logical access shapes.</li>
+</ul>
+<h2>Figure 7: Mixed-Tier Overlap Scheduling</h2>
+<p>Figure type:</p>
+<ul>
+<li>Time-lane or scheduling diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Separate lanes for hot tier 122, warm tier 124, cold tier 126, optional remote node 128, transform stage, and compute launch.</li>
+<li>Show overlapped SRAM read, HBM transfer, host or cold-tier fetch, remote transfer, decompression, reformatting, and output assembly.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Emphasize overlapping operations rather than serial execution.</li>
+</ul>
+<h2>Figure 8: Single Accelerator Embodiment</h2>
+<p>Figure type:</p>
+<ul>
+<li>System architecture embodiment diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show single accelerator boundary.</li>
+<li>Show on-chip SRAM as hot tier 122, HBM as warm tier 124, host DRAM as cold tier 126.</li>
+<li>Show metadata control adjacent to accelerator.</li>
+<li>Show deterministic gather engine 104 assembling execution-ready output from all tiers.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should support the best-mode style embodiment described in the text.</li>
+</ul>
+<h2>Figure 9: Distributed Popular-Prefix Store Embodiment</h2>
+<p>Figure type:</p>
+<ul>
+<li>Distributed system block diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show multiple accelerators or nodes.</li>
+<li>Show distributed ownership manager 116 and shared prefix store.</li>
+<li>Show shared prefix nodes 144 and local suffix nodes 146.</li>
+<li>Show gather engine 104 on at least one node binding local and remote sources.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Distinguish shared logical ownership from physical replica placement.</li>
+</ul>
+<h2>Figure 10: Remote Fetch Versus Local Replication Decision</h2>
+<p>Figure type:</p>
+<ul>
+<li>Decision flowchart.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show remote-owned object request.</li>
+<li>Show decision criteria such as expected reuse, local capacity, service class, and link cost.</li>
+<li>Show branch to direct remote fetch or local replica creation.</li>
+<li>Show metadata update after local replica admission.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should be policy-oriented and should not require any specific mathematical formula.</li>
+</ul>
+<h2>Figure 11: Resumable Session with Compressed Cold Tier</h2>
+<p>Figure type:</p>
+<ul>
+<li>Lifecycle / state-transition diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show active session state in hot and warm tiers.</li>
+<li>Show suspend event, compression, archival to cold tier, resume event, prewarm, deterministic gather, and resumed compute.</li>
+<li>Show compact resume index as a retained warm-tier structure if space allows.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>Make clear that full logical identity is preserved through suspend and resume.</li>
+</ul>
+<h2>Figure 12: Compute Interface Normalization</h2>
+<p>Figure type:</p>
+<ul>
+<li>Output-format architecture diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show gather engine 104 generating either execution-ready tile 148 or descriptor-form artifact 150.</li>
+<li>Show descriptor-form artifact branching into DMA chain 152, stream descriptor set 154, and hardware front-end command structure 156.</li>
+<li>Show compute interface 118 feeding compute unit 120.</li>
+<li>Show metadata manager 106 and related control-plane components outside the compute-consumption path.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should directly support claim coverage for non-materialized outputs.</li>
+</ul>
+<h2>Priority Additional Figures for Complete-Specification Preparation</h2>
+<h3>Figure 13: Gather-Plan Dependency DAG</h3>
+<p>Figure type:</p>
+<ul>
+<li>Directed acyclic graph / execution dependency diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show gather plan 136 represented as dependency nodes and edges.</li>
+<li>Include node types for source fetch, remote fetch, decompression, reformatting, staging, tile write, descriptor emission, and completion fence.</li>
+<li>Show that the deterministic gather engine schedules execution according to dependency order rather than simple linear traversal.</li>
+<li>Show at least one branch in the DAG corresponding to mixed-tier overlap.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should directly support the dependent claim directed to a gather-plan DAG structure and should be treated as a priority figure.</li>
+</ul>
+<h3>Figure 14: Copy-on-Write Divergence Handling</h3>
+<p>Figure type:</p>
+<ul>
+<li>Branch lineage / state-transition diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show a shared prefix lineage, an open tail object, a seal boundary at divergence, and resulting branch-local suffix objects.</li>
+<li>Show which logical objects remain shared and which objects become branch-local.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should support branch-aware ownership and divergence handling.</li>
+</ul>
+<h3>Figure 15: Segment-Level Epoch-Change Rebind During Gather Validation</h3>
+<p>Figure type:</p>
+<ul>
+<li>Validation and rebind flow diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show a compiled gather plan validated against current epoch state.</li>
+<li>Show detection of a stale source descriptor for one or more segments.</li>
+<li>Show segment-level rebind to a replacement source descriptor or fallback plan regeneration.</li>
+<li>Show preservation of deterministic segment ordering after rebind.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should be treated as a priority figure because it supports the claim emphasis on epoch validation and rebind during deterministic gather.</li>
+</ul>
+<h3>Figure 16: Compressed-Cold-to-Warm Promotion Path</h3>
+<p>Figure type:</p>
+<ul>
+<li>Promotion / transform pipeline diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show a compressed cold-tier object, transfer to a warm-tier path, decompression or reconstruction, validation, and publication of the warm-tier source descriptor.</li>
+<li>Show subsequent binding by the deterministic gather engine.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should support the staged promotion embodiment used during resume and mixed-tier execution preparation.</li>
+</ul>
+<h3>Figure 17: Distributed Replica Invalidation and Refresh Workflow</h3>
+<p>Figure type:</p>
+<ul>
+<li>Distributed consistency and refresh flow diagram.</li>
+</ul>
+<p>Required content:</p>
+<ul>
+<li>Show owner epoch change, stale replica detection, invalidation of stale replicas for new gather bindings, refresh or discard decision, and publication of refreshed replica metadata.</li>
+</ul>
+<p>Drafting note:</p>
+<ul>
+<li>This figure should support distributed freshness and replica-update embodiments.</li>
+</ul>
+<h2>Figure Commissioning Priority</h2>
+<ul>
+<li>Priority 1: Figure 13 (Gather-Plan Dependency DAG)</li>
+<li>Priority 1: Figure 15 (Segment-Level Epoch-Change Rebind During Gather Validation)</li>
+<li>Priority 2: Figure 14 (Copy-on-Write Divergence Handling)</li>
+<li>Priority 2: Figure 16 (Compressed-Cold-to-Warm Promotion Path)</li>
+<li>Priority 3: Figure 17 (Distributed Replica Invalidation and Refresh Workflow)</li>
+</ul>
+<h2>Illustrator Checklist</h2>
+<ul>
+<li>Ensure every figure is monochrome and formal.</li>
+<li>Ensure all arrows are unambiguous.</li>
+<li>Ensure reference numerals are reused consistently.</li>
+<li>Avoid long text inside the figures.</li>
+<li>Prefer short labels with longer meaning reserved for the specification body.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>
