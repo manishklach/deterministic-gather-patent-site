@@ -141,7 +141,7 @@ h2 {
 }
 
 h1 {
-  max-width: 11ch;
+  max-width: 17ch;
   font-size: clamp(3.3rem, 7vw, 5.8rem);
 }
 
@@ -633,4 +633,5 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
 
