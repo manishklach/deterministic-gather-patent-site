@@ -11,6 +11,8 @@ The design is deliberately restrained and technical. It is positioned as a serio
   index.html
   styles.css
   script.js
+  robots.txt
+  sitemap.xml
   README.md
   .nojekyll
 ```
@@ -122,6 +124,25 @@ If preferred, you may replace these with other system-safe or Google Fonts.
 - current year in the footer
 
 The site remains readable and usable without JavaScript.
+
+## Search Indexing
+
+The repository includes:
+
+- `robots.txt`
+- `sitemap.xml`
+- canonical metadata
+- Open Graph metadata
+- Twitter card metadata
+
+These improve crawlability and sharing behavior for search engines and link previews.
+
+If you use a custom domain later, update:
+
+- the canonical URL in `index.html`
+- the Open Graph and Twitter image URLs in `index.html`
+- the sitemap URL entries in `sitemap.xml`
+- the sitemap reference in `robots.txt`
 
 ## Asset Placement
 

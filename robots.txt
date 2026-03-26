@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manishklach.github.io/deterministic-gather-patent-site/sitemap.xml
