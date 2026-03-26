@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fff"/>
+  <rect x="36" y="28" width="1328" height="836" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="700">FIG. 13</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="22">Gather-Plan Dependency DAG</text>
+  <text x="94" y="146" font-family="Arial, sans-serif" font-size="18" font-weight="700">136 Gather Plan</text>
+
+  <circle cx="180" cy="280" r="44" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="145" y="286" font-family="Arial, sans-serif" font-size="16">Fetch A</text>
+  <circle cx="420" cy="220" r="44" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="388" y="226" font-family="Arial, sans-serif" font-size="16">Fetch B</text>
+  <circle cx="420" cy="360" r="44" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="380" y="366" font-family="Arial, sans-serif" font-size="16">Remote Fetch</text>
+  <circle cx="680" cy="220" r="50" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="634" y="216" font-family="Arial, sans-serif" font-size="16">Decompress</text>
+  <text x="648" y="238" font-family="Arial, sans-serif" font-size="16">Node</text>
+  <circle cx="680" cy="360" r="50" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="630" y="356" font-family="Arial, sans-serif" font-size="16">Reformat</text>
+  <text x="648" y="378" font-family="Arial, sans-serif" font-size="16">Node</text>
+  <circle cx="960" cy="290" r="52" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="924" y="286" font-family="Arial, sans-serif" font-size="16">Staging</text>
+  <text x="926" y="308" font-family="Arial, sans-serif" font-size="16">Assembly</text>
+  <circle cx="1190" cy="290" r="48" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="1156" y="286" font-family="Arial, sans-serif" font-size="16">Tile /</text>
+  <text x="1148" y="308" font-family="Arial, sans-serif" font-size="16">Descriptor</text>
+
+  <line x1="224" y1="270" x2="376" y2="230" stroke="#111" stroke-width="2"/>
+  <line x1="224" y1="290" x2="376" y2="350" stroke="#111" stroke-width="2"/>
+  <line x1="464" y1="220" x2="630" y2="220" stroke="#111" stroke-width="2"/>
+  <line x1="464" y1="360" x2="630" y2="360" stroke="#111" stroke-width="2"/>
+  <line x1="730" y1="220" x2="910" y2="290" stroke="#111" stroke-width="2"/>
+  <line x1="730" y1="360" x2="910" y2="290" stroke="#111" stroke-width="2"/>
+  <line x1="1012" y1="290" x2="1142" y2="290" stroke="#111" stroke-width="2"/>
+
+  <rect x="94" y="548" width="1180" height="210" fill="none" stroke="#111"/>
+  <text x="122" y="586" font-family="Arial, sans-serif" font-size="16">The directed acyclic structure represents dependencies among fetch, remote transfer, decompression, reformatting, staging, and output-emission operations.</text>
+  <text x="122" y="620" font-family="Arial, sans-serif" font-size="16">The deterministic gather engine schedules execution according to dependency order rather than simple linear traversal.</text>
+  <text x="122" y="654" font-family="Arial, sans-serif" font-size="16">The dashed-node branch illustrates mixed-tier overlap involving a remote or colder source.</text>
+</svg>

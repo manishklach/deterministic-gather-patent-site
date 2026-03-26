@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fff"/>
+  <rect x="36" y="28" width="1328" height="836" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="700">FIG. 17</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="22">Distributed Replica Invalidation and Refresh Workflow</text>
+
+  <rect x="96" y="188" width="240" height="88" fill="none" stroke="#111"/>
+  <text x="138" y="224" font-family="Arial, sans-serif" font-size="18">Owner Epoch Change</text>
+  <text x="152" y="250" font-family="Arial, sans-serif" font-size="16">142 distributed ownership</text>
+  <rect x="430" y="188" width="240" height="88" fill="none" stroke="#111"/>
+  <text x="466" y="224" font-family="Arial, sans-serif" font-size="18">Detect Stale Replica</text>
+  <text x="500" y="250" font-family="Arial, sans-serif" font-size="16">compare version / epoch</text>
+  <rect x="764" y="188" width="240" height="88" fill="none" stroke="#111"/>
+  <text x="806" y="224" font-family="Arial, sans-serif" font-size="18">Invalidate Replica</text>
+  <text x="838" y="250" font-family="Arial, sans-serif" font-size="16">exclude from new binds</text>
+  <rect x="1098" y="188" width="210" height="88" fill="none" stroke="#111"/>
+  <text x="1148" y="224" font-family="Arial, sans-serif" font-size="18">Refresh?</text>
+  <text x="1162" y="250" font-family="Arial, sans-serif" font-size="16">policy decision</text>
+
+  <line x1="336" y1="232" x2="430" y2="232" stroke="#111" stroke-width="2"/>
+  <line x1="670" y1="232" x2="764" y2="232" stroke="#111" stroke-width="2"/>
+  <line x1="1004" y1="232" x2="1098" y2="232" stroke="#111" stroke-width="2"/>
+
+  <rect x="930" y="430" width="260" height="88" fill="none" stroke="#111"/>
+  <text x="982" y="466" font-family="Arial, sans-serif" font-size="18">Refresh Replica</text>
+  <text x="958" y="492" font-family="Arial, sans-serif" font-size="16">copy current valid source</text>
+  <rect x="1160" y="430" width="150" height="88" fill="none" stroke="#111"/>
+  <text x="1204" y="466" font-family="Arial, sans-serif" font-size="18">Discard</text>
+  <text x="1192" y="492" font-family="Arial, sans-serif" font-size="16">replica</text>
+
+  <line x1="1202" y1="276" x2="1202" y2="430" stroke="#111" stroke-width="2"/>
+  <line x1="1202" y1="356" x2="1060" y2="430" stroke="#111" stroke-width="2"/>
+  <text x="1214" y="330" font-family="Arial, sans-serif" font-size="16">Yes</text>
+  <text x="1240" y="392" font-family="Arial, sans-serif" font-size="16">No</text>
+
+  <rect x="930" y="640" width="380" height="88" fill="none" stroke="#111"/>
+  <text x="964" y="676" font-family="Arial, sans-serif" font-size="18">Publish Refreshed Replica Metadata</text>
+  <text x="1008" y="702" font-family="Arial, sans-serif" font-size="16">new epoch / version</text>
+  <line x1="1060" y1="518" x2="1060" y2="640" stroke="#111" stroke-width="2"/>
+
+  <text x="92" y="804" font-family="Arial, sans-serif" font-size="16">Stale replicas are invalidated for new gather bindings until refreshed or discarded according to distributed ownership policy.</text>
+</svg>

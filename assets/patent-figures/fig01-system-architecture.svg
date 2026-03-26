@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fff"/>
+  <rect x="36" y="28" width="1328" height="836" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="700">FIG. 1</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="22">Deterministic Gather-Centric System Architecture</text>
+
+  <rect x="84" y="170" width="520" height="520" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="104" y="202" font-family="Arial, sans-serif" font-size="20" font-weight="700">CONTROL PLANE</text>
+  <rect x="122" y="228" width="440" height="58" fill="none" stroke="#111"/>
+  <text x="144" y="264" font-family="Arial, sans-serif" font-size="18">102 Runtime Scheduler</text>
+  <rect x="122" y="302" width="440" height="58" fill="none" stroke="#111"/>
+  <text x="144" y="338" font-family="Arial, sans-serif" font-size="18">106 Hierarchical Metadata Manager</text>
+  <rect x="122" y="376" width="440" height="58" fill="none" stroke="#111"/>
+  <text x="144" y="412" font-family="Arial, sans-serif" font-size="18">108 Prefix Sharing / DAG Manager</text>
+  <rect x="122" y="450" width="440" height="58" fill="none" stroke="#111"/>
+  <text x="144" y="486" font-family="Arial, sans-serif" font-size="18">110 Residency Controller</text>
+  <rect x="122" y="524" width="440" height="58" fill="none" stroke="#111"/>
+  <text x="144" y="560" font-family="Arial, sans-serif" font-size="18">112 Compression / Representation Manager</text>
+  <rect x="122" y="598" width="440" height="58" fill="none" stroke="#111" stroke-dasharray="8 6"/>
+  <text x="144" y="634" font-family="Arial, sans-serif" font-size="18">114 Allocator / Compaction Manager</text>
+
+  <rect x="640" y="196" width="286" height="468" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="662" y="228" font-family="Arial, sans-serif" font-size="20" font-weight="700">104 Deterministic</text>
+  <text x="662" y="254" font-family="Arial, sans-serif" font-size="20" font-weight="700">Gather Engine</text>
+  <rect x="666" y="288" width="232" height="64" fill="none" stroke="#111"/>
+  <text x="686" y="316" font-family="Arial, sans-serif" font-size="16">Resolve logical request</text>
+  <text x="686" y="338" font-family="Arial, sans-serif" font-size="16">Bind source descriptors</text>
+  <rect x="666" y="372" width="232" height="64" fill="none" stroke="#111"/>
+  <text x="686" y="400" font-family="Arial, sans-serif" font-size="16">Determine transform path</text>
+  <text x="686" y="422" font-family="Arial, sans-serif" font-size="16">Compile gather plan 136</text>
+  <rect x="666" y="456" width="232" height="64" fill="none" stroke="#111"/>
+  <text x="686" y="484" font-family="Arial, sans-serif" font-size="16">Overlap retrieval / staging</text>
+  <text x="686" y="506" font-family="Arial, sans-serif" font-size="16">Validate epoch state 140</text>
+  <rect x="666" y="540" width="232" height="82" fill="none" stroke="#111"/>
+  <text x="686" y="570" font-family="Arial, sans-serif" font-size="16">Emit execution-ready tile 148</text>
+  <text x="686" y="594" font-family="Arial, sans-serif" font-size="16">or descriptor artifact 150</text>
+
+  <rect x="966" y="170" width="320" height="520" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="988" y="202" font-family="Arial, sans-serif" font-size="20" font-weight="700">DATA / COMPUTE PATH</text>
+  <rect x="1000" y="232" width="254" height="60" fill="none" stroke="#111"/>
+  <text x="1020" y="268" font-family="Arial, sans-serif" font-size="18">122 Hot Memory Tier</text>
+  <rect x="1000" y="314" width="254" height="60" fill="none" stroke="#111"/>
+  <text x="1020" y="350" font-family="Arial, sans-serif" font-size="18">124 Warm Memory Tier</text>
+  <rect x="1000" y="396" width="254" height="60" fill="none" stroke="#111"/>
+  <text x="1020" y="432" font-family="Arial, sans-serif" font-size="18">126 Cold Memory Tier</text>
+  <rect x="1000" y="478" width="254" height="60" fill="none" stroke="#111" stroke-dasharray="8 6"/>
+  <text x="1020" y="514" font-family="Arial, sans-serif" font-size="18">128 Remote Node</text>
+  <rect x="1000" y="580" width="254" height="54" fill="none" stroke="#111"/>
+  <text x="1020" y="614" font-family="Arial, sans-serif" font-size="18">118 Compute Interface</text>
+  <rect x="1000" y="654" width="254" height="54" fill="none" stroke="#111"/>
+  <text x="1020" y="688" font-family="Arial, sans-serif" font-size="18">120 Attention / Compute Unit</text>
+
+  <line x1="562" y1="257" x2="640" y2="257" stroke="#111" stroke-width="2"/>
+  <line x1="562" y1="331" x2="640" y2="331" stroke="#111" stroke-width="2"/>
+  <line x1="562" y1="405" x2="640" y2="405" stroke="#111" stroke-width="2"/>
+  <line x1="562" y1="479" x2="640" y2="479" stroke="#111" stroke-width="2"/>
+  <line x1="562" y1="553" x2="640" y2="553" stroke="#111" stroke-width="2"/>
+  <line x1="562" y1="627" x2="640" y2="627" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="262" x2="1000" y2="262" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="344" x2="1000" y2="344" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="426" x2="1000" y2="426" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="508" x2="1000" y2="508" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="607" x2="1000" y2="607" stroke="#111" stroke-width="2"/>
+  <line x1="926" y1="681" x2="1000" y2="681" stroke="#111" stroke-width="2"/>
+</svg>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patent Figures</title>
+  <style>
+    :root{--bg:#ffffff;--line:#1a1a1a;--muted:#4b4b4b;--panel:#f8f8f8}
+    *{box-sizing:border-box}
+    body{margin:0;background:#fff;color:#111;font:16px/1.55 "IBM Plex Sans",Arial,sans-serif;padding:32px 20px}
+    .shell{max-width:1180px;margin:0 auto}
+    h1{margin:0 0 10px;font:600 42px/1.05 Georgia,serif}
+    p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:28px}
+    .card{display:block;padding:18px;border:1px solid #d9d9d9;border-radius:18px;background:var(--panel);color:inherit;text-decoration:none}
+    .card img{width:100%;border:1px solid #cfcfcf;border-radius:12px;background:#fff;margin:12px 0 14px}
+    .type{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#222}
+    .id{color:#666;font-weight:600}
+    .card h2{margin:8px 0 0;font-size:1.08rem}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <span class="type">Formal Patent Figure Set</span>
+    <h1>Patent-style line drawings</h1>
+    <p>Monochrome SVG figures derived from the patent drawing instruction pack. These are browser-friendly drafting baselines for the patent figures.</p>
+    <div class="grid">
+      <a class="card" href="./fig01-system-architecture.svg">
+        <span class="type">Figure 1</span>
+        <h2>Deterministic Gather-Centric System Architecture</h2>
+        <img src="./fig01-system-architecture.svg" alt="Figure 1">
+        <p class="id">System 100, control-plane elements, memory tiers, and compute path.</p>
+      </a>
+      <a class="card" href="./fig13-gather-plan-dag.svg">
+        <span class="type">Figure 13</span>
+        <h2>Gather-Plan Dependency DAG</h2>
+        <img src="./fig13-gather-plan-dag.svg" alt="Figure 13">
+        <p class="id">Priority figure supporting dependency-driven gather scheduling.</p>
+      </a>
+      <a class="card" href="./fig14-cow-divergence.svg">
+        <span class="type">Figure 14</span>
+        <h2>Copy-on-Write Divergence Handling</h2>
+        <img src="./fig14-cow-divergence.svg" alt="Figure 14">
+        <p class="id">Shared prefix lineage, seal boundary, and branch-local suffix creation.</p>
+      </a>
+      <a class="card" href="./fig15-epoch-rebind.svg">
+        <span class="type">Figure 15</span>
+        <h2>Segment-Level Epoch-Change Rebind</h2>
+        <img src="./fig15-epoch-rebind.svg" alt="Figure 15">
+        <p class="id">Priority figure showing both rebind and plan-regeneration branches.</p>
+      </a>
+      <a class="card" href="./fig16-cold-to-warm-promotion.svg">
+        <span class="type">Figure 16</span>
+        <h2>Compressed-Cold-to-Warm Promotion</h2>
+        <img src="./fig16-cold-to-warm-promotion.svg" alt="Figure 16">
+        <p class="id">Promotion, reconstruction, validation, and subsequent gather binding.</p>
+      </a>
+      <a class="card" href="./fig17-distributed-replica-refresh.svg">
+        <span class="type">Figure 17</span>
+        <h2>Distributed Replica Invalidation and Refresh</h2>
+        <img src="./fig17-distributed-replica-refresh.svg" alt="Figure 17">
+        <p class="id">Owner epoch change, stale replica invalidation, refresh, and metadata publication.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

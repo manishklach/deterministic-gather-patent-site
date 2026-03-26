@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fff"/>
+  <rect x="36" y="28" width="1328" height="836" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="700">FIG. 16</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="22">Compressed-Cold-to-Warm Promotion Path</text>
+
+  <rect x="104" y="220" width="250" height="90" fill="none" stroke="#111"/>
+  <text x="142" y="260" font-family="Arial, sans-serif" font-size="18">126 Cold Tier Object</text>
+  <text x="148" y="286" font-family="Arial, sans-serif" font-size="16">compressed representation</text>
+  <rect x="444" y="220" width="250" height="90" fill="none" stroke="#111"/>
+  <text x="502" y="260" font-family="Arial, sans-serif" font-size="18">Transfer</text>
+  <text x="486" y="286" font-family="Arial, sans-serif" font-size="16">promote to warm path</text>
+  <rect x="784" y="220" width="250" height="90" fill="none" stroke="#111"/>
+  <text x="816" y="260" font-family="Arial, sans-serif" font-size="18">Decompress / Reconstruct</text>
+  <text x="850" y="286" font-family="Arial, sans-serif" font-size="16">using 134</text>
+  <rect x="1104" y="220" width="190" height="90" fill="none" stroke="#111"/>
+  <text x="1134" y="260" font-family="Arial, sans-serif" font-size="18">Validate</text>
+  <text x="1128" y="286" font-family="Arial, sans-serif" font-size="16">publish epoch</text>
+
+  <line x1="354" y1="265" x2="444" y2="265" stroke="#111" stroke-width="2"/>
+  <line x1="694" y1="265" x2="784" y2="265" stroke="#111" stroke-width="2"/>
+  <line x1="1034" y1="265" x2="1104" y2="265" stroke="#111" stroke-width="2"/>
+
+  <rect x="470" y="486" width="470" height="110" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="502" y="528" font-family="Arial, sans-serif" font-size="18">124 Warm Tier Source Descriptor 132</text>
+  <text x="508" y="556" font-family="Arial, sans-serif" font-size="16">published after reconstruction and validation</text>
+
+  <line x1="1198" y1="310" x2="1198" y2="420" stroke="#111" stroke-width="2"/>
+  <line x1="1198" y1="420" x2="940" y2="420" stroke="#111" stroke-width="2"/>
+  <line x1="940" y1="420" x2="940" y2="486" stroke="#111" stroke-width="2"/>
+
+  <rect x="500" y="668" width="410" height="84" fill="none" stroke="#111"/>
+  <text x="534" y="706" font-family="Arial, sans-serif" font-size="18">104 Deterministic Gather Engine</text>
+  <text x="552" y="732" font-family="Arial, sans-serif" font-size="16">subsequent bind to promoted warm-tier source</text>
+  <line x1="705" y1="596" x2="705" y2="668" stroke="#111" stroke-width="2"/>
+</svg>

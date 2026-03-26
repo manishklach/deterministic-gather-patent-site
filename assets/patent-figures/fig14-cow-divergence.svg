@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fff"/>
+  <rect x="36" y="28" width="1328" height="836" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="26" font-weight="700">FIG. 14</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="22">Copy-on-Write Divergence Handling</text>
+
+  <rect x="560" y="130" width="280" height="58" fill="none" stroke="#111"/>
+  <text x="602" y="166" font-family="Arial, sans-serif" font-size="20">144 Shared Prefix Node</text>
+  <rect x="520" y="250" width="360" height="64" fill="none" stroke="#111"/>
+  <text x="550" y="278" font-family="Arial, sans-serif" font-size="18">130 Shared Historical KV Object</text>
+  <text x="628" y="302" font-family="Arial, sans-serif" font-size="16">sealed</text>
+  <rect x="490" y="380" width="420" height="78" fill="none" stroke="#111"/>
+  <text x="520" y="410" font-family="Arial, sans-serif" font-size="18">130 Open Tail Object</text>
+  <text x="532" y="436" font-family="Arial, sans-serif" font-size="16">appendable prior to divergence</text>
+
+  <line x1="700" y1="188" x2="700" y2="250" stroke="#111" stroke-width="2"/>
+  <line x1="700" y1="314" x2="700" y2="380" stroke="#111" stroke-width="2"/>
+  <line x1="700" y1="458" x2="700" y2="520" stroke="#111" stroke-width="2"/>
+  <polygon points="700,520 680,560 720,560" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="640" y="602" font-family="Arial, sans-serif" font-size="18">seal boundary at divergence</text>
+
+  <rect x="180" y="650" width="340" height="78" fill="none" stroke="#111"/>
+  <text x="220" y="680" font-family="Arial, sans-serif" font-size="18">146 Branch-Local Suffix A</text>
+  <text x="238" y="706" font-family="Arial, sans-serif" font-size="16">new append path after seal</text>
+  <rect x="880" y="650" width="340" height="78" fill="none" stroke="#111"/>
+  <text x="920" y="680" font-family="Arial, sans-serif" font-size="18">146 Branch-Local Suffix B</text>
+  <text x="938" y="706" font-family="Arial, sans-serif" font-size="16">alternate append path</text>
+
+  <line x1="680" y1="560" x2="350" y2="650" stroke="#111" stroke-width="2"/>
+  <line x1="720" y1="560" x2="1050" y2="650" stroke="#111" stroke-width="2"/>
+  <text x="104" y="806" font-family="Arial, sans-serif" font-size="16">Shared objects remain referenced by multiple branches, while post-divergence suffix objects become branch-local.</text>
+</svg>
