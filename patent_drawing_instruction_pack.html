@@ -39,6 +39,11 @@
     pre { background: var(--code); padding: 18px; border-radius: 16px; overflow: auto; border: 1px solid rgba(152,202,216,0.10); }
     pre code { background: transparent; padding: 0; }
     .lede { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
+    .figure-gallery { display: grid; gap: 22px; margin-top: 28px; }
+    .figure-card { padding: 18px; border: 1px solid rgba(152,202,216,0.10); border-radius: 18px; background: rgba(255,255,255,0.02); }
+    .figure-card h3 { margin-top: 0; }
+    .figure-card img { width: 100%; height: auto; border: 1px solid rgba(152,202,216,0.12); border-radius: 12px; background: #fff; }
+    .figure-links { margin: 10px 0 0; font-size: 0.95rem; }
     @media (max-width: 720px) {
       .top-inner { flex-direction: column; align-items: flex-start; }
       .nav a { margin: 0 16px 0 0; }
@@ -383,6 +388,40 @@
 <li>Avoid long text inside the figures.</li>
 <li>Prefer short labels with longer meaning reserved for the specification body.</li>
 </ul>
+<h2>Drafted Baseline Figures</h2>
+<p>The following drafted baseline figures are included as browser-viewable monochrome SVG sheets corresponding to the present drawing pack.</p>
+<div class="figure-gallery">
+  <section class="figure-card">
+    <h3>Figure 1: Deterministic Gather-Centric System Architecture</h3>
+    <img src="./assets/patent-figures/fig01-system-architecture.svg" alt="Figure 1 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig01-system-architecture.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+  <section class="figure-card">
+    <h3>Figure 13: Gather-Plan Dependency DAG</h3>
+    <img src="./assets/patent-figures/fig13-gather-plan-dag.svg" alt="Figure 13 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig13-gather-plan-dag.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+  <section class="figure-card">
+    <h3>Figure 14: Copy-on-Write Divergence Handling</h3>
+    <img src="./assets/patent-figures/fig14-cow-divergence.svg" alt="Figure 14 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig14-cow-divergence.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+  <section class="figure-card">
+    <h3>Figure 15: Segment-Level Epoch-Change Rebind During Gather Validation</h3>
+    <img src="./assets/patent-figures/fig15-epoch-rebind.svg" alt="Figure 15 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig15-epoch-rebind.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+  <section class="figure-card">
+    <h3>Figure 16: Compressed-Cold-to-Warm Promotion Path</h3>
+    <img src="./assets/patent-figures/fig16-cold-to-warm-promotion.svg" alt="Figure 16 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig16-cold-to-warm-promotion.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+  <section class="figure-card">
+    <h3>Figure 17: Distributed Replica Invalidation and Refresh Workflow</h3>
+    <img src="./assets/patent-figures/fig17-distributed-replica-refresh.svg" alt="Figure 17 patent drawing">
+    <p class="figure-links"><a href="./assets/patent-figures/fig17-distributed-replica-refresh.svg" target="_blank" rel="noopener">Open full figure sheet</a></p>
+  </section>
+</div>
     </article>
   </main>
 </body>

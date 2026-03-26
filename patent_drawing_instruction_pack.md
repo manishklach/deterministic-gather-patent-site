@@ -291,3 +291,14 @@ Drafting note:
 - Ensure reference numerals are reused consistently.
 - Avoid long text inside the figures.
 - Prefer short labels with longer meaning reserved for the specification body.
+
+## Drafted Baseline Figures
+
+The following drafted baseline figures are available as browser-viewable monochrome SVG sheets corresponding to the present drawing pack:
+
+- Figure 1: `./assets/patent-figures/fig01-system-architecture.svg`
+- Figure 13: `./assets/patent-figures/fig13-gather-plan-dag.svg`
+- Figure 14: `./assets/patent-figures/fig14-cow-divergence.svg`
+- Figure 15: `./assets/patent-figures/fig15-epoch-rebind.svg`
+- Figure 16: `./assets/patent-figures/fig16-cold-to-warm-promotion.svg`
+- Figure 17: `./assets/patent-figures/fig17-distributed-replica-refresh.svg`
