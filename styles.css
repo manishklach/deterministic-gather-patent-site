@@ -413,7 +413,9 @@ a {
 .diagram-frame img {
   width: 100%;
   min-height: 410px;
-  object-fit: cover;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center;
   opacity: 0.96;
 }
 
