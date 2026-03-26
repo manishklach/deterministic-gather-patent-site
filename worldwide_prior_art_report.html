@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worldwide Prior-Art Report</title>
+  <meta name="robots" content="index, follow">
+  <style>
+    :root { --bg:#0b1218; --panel:#111b23; --line:#243543; --text:#eaf1f5; --muted:#9eb1bf; --link:#b8dde7; --code:#16242f; --max:980px; }
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#071017,#0b1218);color:var(--text);font:16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+    .top{position:sticky;top:0;z-index:10;background:rgba(11,18,24,.84);backdrop-filter:blur(14px);border-bottom:1px solid rgba(152,202,216,.12)}
+    .top-inner{width:min(100%,var(--max));margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:600;letter-spacing:.02em} .nav a{color:var(--muted);text-decoration:none;margin-left:18px} .nav a:hover{color:var(--text)}
+    .shell{width:min(100%,var(--max));margin:0 auto;padding:32px 20px 80px} .doc{background:rgba(17,27,35,.72);border:1px solid rgba(152,202,216,.10);border-radius:24px;padding:34px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+    h1,h2,h3,h4{font-family:Georgia,serif;line-height:1.12;letter-spacing:-.02em;margin:1.2em 0 .5em} h1{margin-top:0;font-size:clamp(2.2rem,5vw,3.6rem)} h2{font-size:clamp(1.5rem,3vw,2.1rem);padding-top:.3em;border-top:1px solid rgba(152,202,216,.10)} h3{font-size:1.18rem}
+    p,li{color:var(--muted)} a{color:var(--link)} ul,ol{padding-left:1.35rem} li+li{margin-top:.45rem} code{background:var(--code);padding:.12rem .35rem;border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.94em} pre{background:var(--code);padding:18px;border-radius:16px;overflow:auto;border:1px solid rgba(152,202,216,.10)} pre code{background:transparent;padding:0} .lede{color:var(--muted);margin:0 0 24px;max-width:70ch}
+    @media (max-width:720px){.top-inner{flex-direction:column;align-items:flex-start} .nav a{margin:0 16px 0 0} .doc{padding:22px}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="top-inner"><div class="brand">Deterministic Gather Patent Materials</div><nav class="nav"><a href="./index.html">Site</a></nav></div></header>
+  <main class="shell"><article class="doc"><h1>Worldwide Prior-Art Report</h1><p class="lede">Browser-friendly technical document view generated from the repository markdown source.</p><h1>Worldwide Prior-Art Review</h1>
+<p>Invention under review: deterministic gather of logically managed key-value objects into execution-ready tiles or descriptors for autoregressive neural network inference, supported by residency-first hierarchical management.</p>
+<p>Review date: 2026-03-26</p>
+<p>This report is a preliminary technical prior-art review intended to support claim drafting. It is not a legal invalidity opinion or freedom-to-operate opinion.</p>
+<h2>Bottom-Line Assessment</h2>
+<p>The closest worldwide prior art is not generic caching. The nearest art is the emerging body of LLM-serving systems and filings that already disclose one or more of:</p>
+<ul>
+<li>blockized or paged KV storage,</li>
+<li>logical-to-physical indirection for KV cache,</li>
+<li>prefix or prompt reuse,</li>
+<li>offloading or multi-tier KV placement,</li>
+<li>distributed KV reuse,</li>
+<li>compression or quantization of KV state, and</li>
+<li>asynchronous loading or prefetching of KV state.</li>
+</ul>
+<p>The strongest novelty position remains the same as previously identified:</p>
+<ul>
+<li>deterministic gather as the central execution-preparation mechanism,</li>
+<li>using logically managed KV objects rather than mere page tables or flat per-sequence tensors,</li>
+<li>with representation-aware source binding across multiple tiers,</li>
+<li>with epoch-safe validation, rebind, or publication of source descriptors,</li>
+<li>and with output forms that include descriptor programs, DMA chains, stream descriptors, and hardware front-end command structures in addition to materialized tiles.</li>
+</ul>
+<p>If the independent claims stop at blockized KV storage, logical mapping, prefix sharing, or multi-tier placement, the novelty risk is high. If the independent claims require deterministic gather with source validation and execution-ready generation from shared, tiered, and format-diverse logical objects, the position is materially stronger.</p>
+<h2>Search Scope</h2>
+<p>The review considered worldwide patent and non-patent literature categories, including:</p>
+<ul>
+<li>published papers and preprints,</li>
+<li>open-source or official technical documentation,</li>
+<li>public technical reports,</li>
+<li>patent publications from multiple jurisdictions accessible through global search services.</li>
+</ul>
+<p>The principal search themes were:</p>
+<ul>
+<li>paged KV cache and block table attention,</li>
+<li>dynamic KV memory management,</li>
+<li>prompt or prefix attention-state reuse,</li>
+<li>multi-tier KV offload and prefetch,</li>
+<li>distributed KV reuse or migration,</li>
+<li>KV compression and quantization,</li>
+<li>inference-time gathering or descriptor-based execution preparation.</li>
+</ul>
+<h2>Closest Non-Patent Literature</h2>
+<h3>1. PagedAttention / vLLM</h3>
+<p>Reference:</p>
+<ul>
+<li>Woosuk Kwon et al., “Efficient Memory Management for Large Language Model Serving with PagedAttention,” arXiv:2309.06180. <a href="https://arxiv.org/abs/2309.06180">arXiv</a></li>
+<li>vLLM documentation, “Paged Attention.” <a href="https://docs.vllm.ai/en/stable/design/paged_attention/">vLLM docs</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>This is the primary prior-art risk for any claims directed to non-contiguous KV storage, blockized KV objects, logical indirection, and sharing across requests.</li>
+<li>vLLM publicly teaches paged KV caches and indirection-based access to KV blocks.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>partitioning KV cache into blocks,</li>
+<li>virtual-memory-like indirection,</li>
+<li>efficient reuse of KV blocks,</li>
+<li>support for complex sampling or request sharing.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather as a separately claimed control-plane execution-preparation mechanism,</li>
+<li>a hierarchical metadata structure for logical identity beyond block table indirection,</li>
+<li>representation-aware source binding across multiple tiers,</li>
+<li>epoch-safe publication or rebind of source descriptors during gather validation,</li>
+<li>descriptor-program or DMA-chain style execution output as the central invention theme.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Very high against broad claims on blockized logical mapping alone.</li>
+<li>Moderate against claims that require deterministic gather with epoch-safe validation and representation-aware mixed-tier assembly.</li>
+</ul>
+<h3>2. vAttention</h3>
+<p>Reference:</p>
+<ul>
+<li>Ramya Prabhu et al., “vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,” arXiv:2405.04437. <a href="https://arxiv.org/abs/2405.04437">arXiv</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>This is strong art against claims merely covering “dynamic memory management for KV cache.”</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>dynamic memory management for serving LLMs,</li>
+<li>decoupling virtual and physical memory allocation,</li>
+<li>preserving virtual contiguity of KV cache,</li>
+<li>avoiding some overheads of paged attention.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather of logically managed KV objects as the central compute-preparation mechanism,</li>
+<li>representation-aware mixed-tier gather planning,</li>
+<li>prefix-DAG sharing as part of the same gather-centric architecture,</li>
+<li>gather templates and epoch-safe source rebind as a central design.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>High against claims framed as generalized dynamic KV memory management.</li>
+<li>Lower against claims anchored on deterministic gather with descriptor-form execution outputs and source-validation semantics.</li>
+</ul>
+<h3>3. Prompt Cache</h3>
+<p>Reference:</p>
+<ul>
+<li>In Gim et al., “Prompt Cache: Modular Attention Reuse for Low-Latency Inference,” arXiv:2311.04934. <a href="https://arxiv.org/abs/2311.04934">arXiv</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>This is strong art against claims broadly directed to reusing precomputed attention states or prompt prefixes.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>reuse of attention states across prompts,</li>
+<li>prompt modules and schema-based reusable segments,</li>
+<li>positional correctness during reuse.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>generalized deterministic gather over multi-tier, representation-diverse, relocatable logical objects,</li>
+<li>epoch-safe source validation and rebind,</li>
+<li>unified handling of shared prefixes, branch-local suffixes, compression state, and distributed ownership in one gather path.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>High against claims broadly reciting prompt reuse or modular prefix reuse.</li>
+<li>Moderate to low against claims requiring the full deterministic gather architecture.</li>
+</ul>
+<h3>4. LMCache</h3>
+<p>Reference:</p>
+<ul>
+<li>“LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference.” <a href="https://lmcache.ai/tech_report.pdf">LMCache technical report</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>This is one of the most important practical-system references for your case.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>KV cache persistence beyond a single query lifecycle,</li>
+<li>retrieval and metadata preparation,</li>
+<li>asynchronous layer-wise loading and storing,</li>
+<li>controller interfaces for lookup, move, clear, pin, and compress,</li>
+<li>migration across instances,</li>
+<li>pinning in GPU memory,</li>
+<li>tier-aware handling and prefetch to faster storage.</li>
+</ul>
+<p>Specific passages observed:</p>
+<ul>
+<li>the report states that KV cache may be reused beyond the lifecycle of a query,</li>
+<li>it describes layer-wise loading and storing,</li>
+<li>it exposes controller interfaces for locating cached entries or migrating them across instances,</li>
+<li>it describes pinning and compression controls.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather as the core execution-preparation invention,</li>
+<li>hierarchical logical object management with explicit source descriptors and representation descriptors,</li>
+<li>epoch-safe source publication or segment-level rebind during gather validation,</li>
+<li>descriptor-program or hardware front-end command output as a central mechanism.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>High against claims on enterprise KV cache layer, migration, pinning, and tier-aware management by themselves.</li>
+<li>Moderate against properly narrowed deterministic-gather claims.</li>
+</ul>
+<h3>5. PRESERVE</h3>
+<p>Reference:</p>
+<ul>
+<li>Ahmet Caner Yüzügüler et al., “PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving,” arXiv:2501.08192. <a href="https://arxiv.org/abs/2501.08192">arXiv</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>This is directly relevant to prefetch and overlap arguments.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>prefetching model weights and KV-cache,</li>
+<li>overlapping movement with communication,</li>
+<li>distributed serving context.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>a logical KV-object substrate with deterministic gather output generation,</li>
+<li>hierarchical object mapping and source descriptor validation,</li>
+<li>descriptor-oriented gather plans spanning shared, tiered, and format-diverse objects.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Moderate against claims emphasizing prefetch/overlap alone.</li>
+<li>Lower if overlap appears only as a dependent feature under deterministic gather.</li>
+</ul>
+<h2>Closest Patent Publications Identified</h2>
+<h3>6. US12182028B1</h3>
+<p>Reference:</p>
+<ul>
+<li>“Method and apparatus to cache key-value data in low-precision numerics for efficient generative transformer execution.” <a href="https://patents.google.com/patent/US12182028B1/en">Google Patents</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Relevant to low-precision KV storage, transposition, blocking, and compute usage of cached KV state.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>storing and converting projection tokens,</li>
+<li>low-precision or block-form storage,</li>
+<li>transposed key forms,</li>
+<li>compute using converted/transposed cached data.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather from a logically managed multi-tier object space,</li>
+<li>hierarchical metadata with source publication epochs,</li>
+<li>prefix-sharing DAGs and distributed ownership in the same architecture.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Moderate for claims emphasizing representation conversion only.</li>
+<li>Lower for deterministic-gather claims.</li>
+</ul>
+<h3>7. US20250061316</h3>
+<p>Reference:</p>
+<ul>
+<li>“Dynamic quantization and memory management of key-value cache for serving large language models.” <a href="https://patents.justia.com/patent/20250061316">Justia summary</a></li>
+</ul>
+<p>Observed passage:</p>
+<ul>
+<li>describes fetching desired cached key tensors and value tensors from global shared memory into GPU worker local memory during autoregressive decoding.</li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Relevant to memory management, quantization, and movement of KV state into local compute memory.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>dynamic quantization and memory management,</li>
+<li>local-memory fetching for attention.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather plan compilation over logically managed objects,</li>
+<li>hierarchical source descriptors with epoch-safe rebinding,</li>
+<li>shared prefix and branch-aware object ownership integrated with descriptor-form execution outputs.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Moderate.</li>
+</ul>
+<h3>8. CN120851217A</h3>
+<p>Reference:</p>
+<ul>
+<li>“Large model reasoning method, system, electronic device and storage medium based on multi-level cache mechanism.” <a href="https://patents.google.com/patent/CN120851217A/en">Google Patents</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Highly relevant as worldwide art against broad multi-tier KV claims.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>a three-level caching mechanism using GPU memory, system memory, and disk,</li>
+<li>KV cache blocks,</li>
+<li>matching based on block identifiers,</li>
+<li>determining prefill and decode instances based on KV distribution and load,</li>
+<li>multi-instance routing and prefix matching.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather as a discrete execution-preparation mechanism,</li>
+<li>representation-aware transform chains attached to logical KV objects,</li>
+<li>epoch-safe gather validation and source rebinding,</li>
+<li>descriptor-program output.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>High against claims merely reciting multi-level KV caching with block identifiers.</li>
+<li>Moderate against properly narrowed gather-centric claims.</li>
+</ul>
+<h3>9. CN120338090A</h3>
+<p>Reference:</p>
+<ul>
+<li>“A method and device for reasoning of a large language model.” <a href="https://patents.google.com/patent/CN120338090A/en">Google Patents</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Relevant to a shared memory pool of historical KV cache data and reuse by matching segmented input data.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>matching input segments against historical KV cache data in a shared memory pool,</li>
+<li>bypassing recomputation when matching cached KV state exists,</li>
+<li>generating and storing KV cache data corresponding to segmented input data.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather from logical objects across multiple representations and tiers,</li>
+<li>epoch-safe relocation-aware binding,</li>
+<li>descriptor-form execution output.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Moderate.</li>
+</ul>
+<h3>10. US20250094712A1</h3>
+<p>Reference:</p>
+<ul>
+<li>“Multi-granular clustering-based solution for key-value cache compression.” <a href="https://patents.google.com/patent/US20250094712A1/en">Google Patents</a></li>
+</ul>
+<p>Why it matters:</p>
+<ul>
+<li>Relevant to compression, multi-level memory, and distributed environments.</li>
+</ul>
+<p>What it appears to disclose:</p>
+<ul>
+<li>KV cache compression,</li>
+<li>multi-level memory or hierarchical cache discussion,</li>
+<li>distributed-computing applicability.</li>
+</ul>
+<p>What it does not clearly disclose, based on the current review:</p>
+<ul>
+<li>deterministic gather with source descriptors and output descriptors,</li>
+<li>epoch-safe source publication and rebind,</li>
+<li>gather templates.</li>
+</ul>
+<p>Risk rating:</p>
+<ul>
+<li>Moderate for compression-focused claims.</li>
+</ul>
+<h2>Prior-Art Themes Most Likely to Be Used Against Claims</h2>
+<p>The following themes should be treated as already crowded:</p>
+<ul>
+<li>fixed-size or variable-size KV blocks,</li>
+<li>logical block lookup tables,</li>
+<li>non-contiguous KV allocation,</li>
+<li>block-based copy-on-write,</li>
+<li>prefix reuse and prompt reuse,</li>
+<li>KV offloading to CPU or lower tiers,</li>
+<li>KV quantization and compression,</li>
+<li>asynchronous load/store of KV by layer,</li>
+<li>distributed KV migration and replication,</li>
+<li>prefetching of KV state.</li>
+</ul>
+<p>These features can still appear in dependent claims, but they should not carry the novelty burden of the broadest independent claims.</p>
+<h2>Features That Still Look Most Defensible</h2>
+<p>On the current record, the following combination still appears the most defensible:</p>
+<ul>
+<li>logical management of KV state as named objects with source descriptors and representation descriptors,</li>
+<li>deterministic gather as a separately defined control-plane execution-preparation mechanism,</li>
+<li>gather-plan compilation that binds source objects from shared, tiered, and format-diverse storage,</li>
+<li>validation of source bindings against metadata epochs before launch,</li>
+<li>segment-level rebind or plan regeneration when an epoch change is detected,</li>
+<li>execution-ready output that may be descriptor-form rather than only materialized buffers,</li>
+<li>optional gather-template reuse under source and epoch compatibility rules.</li>
+</ul>
+<p>The strongest system claim should therefore require a deterministic gather engine configured to:</p>
+<ul>
+<li>resolve logically managed KV objects,</li>
+<li>bind and validate sources,</li>
+<li>determine transform paths,</li>
+<li>assemble execution-ready output in a predetermined order,</li>
+<li>and provide that output to compute without direct metadata traversal by the compute kernel.</li>
+</ul>
+<h2>Claim-Drafting Consequences</h2>
+<h3>Features that should be in the broadest independent claims</h3>
+<ul>
+<li>deterministic gather engine,</li>
+<li>logically managed KV objects,</li>
+<li>hierarchical metadata manager,</li>
+<li>source binding from logical-to-physical mappings,</li>
+<li>transform-path determination based on representation state,</li>
+<li>execution-ready output for compute without direct metadata traversal by compute.</li>
+</ul>
+<h3>Features that should likely appear in at least one independent claim or a strong dependent claim set</h3>
+<ul>
+<li>metadata epoch validation before gather launch,</li>
+<li>segment-level rebind or plan regeneration after epoch change,</li>
+<li>multi-tier source binding for the same inference step,</li>
+<li>descriptor-form output, not only materialized tiles,</li>
+<li>gather-template reuse.</li>
+</ul>
+<h3>Features that should generally be dependent claims unless specifically needed</h3>
+<ul>
+<li>fixed block size,</li>
+<li>particular tree type,</li>
+<li>particular compression algorithm,</li>
+<li>specific promotion heuristic,</li>
+<li>specific replication heuristic,</li>
+<li>specific pointer-swap or version-table implementation.</li>
+</ul>
+<h2>Recommended Claim Strategy After This Search</h2>
+<p>Use a three-tier claim strategy:</p>
+<h3>Tier 1: Primary independent claims</h3>
+<p>Focus on deterministic gather and source validation.</p>
+<h3>Tier 2: Strong fallback dependents</h3>
+<p>Add:</p>
+<ul>
+<li>descriptor programs / DMA chains / stream descriptors,</li>
+<li>epoch-safe rebind,</li>
+<li>representation-aware mixed-tier assembly,</li>
+<li>gather templates.</li>
+</ul>
+<h3>Tier 3: Secondary dependents</h3>
+<p>Add:</p>
+<ul>
+<li>prefix DAG,</li>
+<li>branch-aware ownership,</li>
+<li>copy-on-write divergence,</li>
+<li>distributed replica refresh,</li>
+<li>compressed-cold-to-warm promotion,</li>
+<li>popular-prefix store.</li>
+</ul>
+<h2>References Used</h2>
+<ul>
+<li>PagedAttention paper: <a href="https://arxiv.org/abs/2309.06180">arXiv 2309.06180</a></li>
+<li>vLLM paged attention docs: <a href="https://docs.vllm.ai/en/stable/design/paged_attention/">vLLM docs</a></li>
+<li>vAttention paper: <a href="https://arxiv.org/abs/2405.04437">arXiv 2405.04437</a></li>
+<li>Prompt Cache paper: <a href="https://arxiv.org/abs/2311.04934">arXiv 2311.04934</a></li>
+<li>PRESERVE paper: <a href="https://arxiv.org/abs/2501.08192">arXiv 2501.08192</a></li>
+<li>LMCache report: <a href="https://lmcache.ai/tech_report.pdf">LMCache technical report</a></li>
+<li>US12182028B1: <a href="https://patents.google.com/patent/US12182028B1/en">Google Patents</a></li>
+<li>US20250061316: <a href="https://patents.justia.com/patent/20250061316">Justia summary</a></li>
+<li>CN120851217A: <a href="https://patents.google.com/patent/CN120851217A/en">Google Patents</a></li>
+<li>CN120338090A: <a href="https://patents.google.com/patent/CN120338090A/en">Google Patents</a></li>
+<li>US20250094712A1: <a href="https://patents.google.com/patent/US20250094712A1/en">Google Patents</a></li>
+</ul>
+<h2>Recommended Next Step</h2>
+<p>Revise the draft claims into three explicit sets:</p>
+<ul>
+<li>Broad set centered on deterministic gather plus source validation.</li>
+<li>Medium set adding epoch-safe rebind and descriptor-form output.</li>
+<li>Fallback set adding gather templates, multi-tier representation transforms, and distributed replica controls.</li>
+</ul></article></main>
+</body>
+</html>

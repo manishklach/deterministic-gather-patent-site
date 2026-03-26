@@ -39,8 +39,7 @@ The homepage is organized into these sections:
 7. Differentiation
 8. Method / Execution Flow
 9. Artifacts
-10. Contact
-11. Footer
+10. Footer
 
 ## Metadata and Status Editing
 
@@ -60,8 +59,6 @@ Suggested edits:
 - replace `[Jurisdiction]` with the actual jurisdiction
 - update the publication wording to match the actual record
 - update the year if needed
-
-## Contact Placeholder Editing
 
 ## Asset Placement
 
@@ -86,10 +83,14 @@ Recommended usage:
 
 The repository also includes generated HTML document views for the core patent materials:
 
+- `india_provisional_filing_master.html`
+- `final_india_provisional_specification.html`
+- `complete_spec_claims_draft.html`
 - `patent_master_dossier.html`
 - `patent_drawing_instruction_pack.html`
+- `worldwide_prior_art_report.html`
 
-These are intended to provide cleaner browser presentation than a placeholder PDF link.
+These are intended to provide cleaner browser presentation than a placeholder PDF link. The primary site patent link should ordinarily point to `india_provisional_filing_master.html`.
 
 ## GitHub Pages Deployment
 
@@ -136,8 +137,11 @@ If you later change the domain or move the repo, update:
 
 Update these links in `index.html` as needed:
 
+- `./india_provisional_filing_master.html`
 - `./patent_master_dossier.html`
+- `./complete_spec_claims_draft.html`
 - `./patent_drawing_instruction_pack.html`
+- `./worldwide_prior_art_report.html`
 - `./assets/architecture-overview.svg`
 - `./assets/gather-flow.svg`
 - `./assets/figures/index.html`
@@ -174,7 +178,6 @@ The core page content remains fully readable without JavaScript.
 Before sharing publicly:
 
 - replace the asset placeholders with real files
-- replace the contact placeholders
 - confirm metadata wording against the actual publication record
 - confirm the repository URL
 - confirm the GitHub Pages URL
