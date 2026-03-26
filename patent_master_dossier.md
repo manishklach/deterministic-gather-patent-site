@@ -693,7 +693,7 @@ The following draft claims are intended for later complete-specification develop
 1. A computer-implemented system for autoregressive neural network inference, the system comprising:
    a memory arrangement storing key-value state as a plurality of logically managed key-value objects associated with prior token positions of one or more inference sequences;
    a hierarchical metadata manager configured to maintain logical-to-physical mappings for the logically managed key-value objects independently of current physical placement, the mappings indicating, for at least a subset of the logically managed key-value objects, one or more of a memory tier, a physical location, a representation state, an ownership state, and a version state;
-   a deterministic gather engine configured, for an inference step, to resolve a logical access requirement for historical key-value state by traversal of the hierarchical metadata manager, to bind source key-value objects from one or more physical placements based on the logical-to-physical mappings, to determine any required transform path associated with the bound source key-value objects, to validate the bound source key-value objects against a current version state before execution, and to generate an execution-ready output for a compute unit by assembling the bound source key-value objects in a predetermined order; and
+   a deterministic gather engine configured, for an inference step, to resolve a logical access requirement for historical key-value state by traversal of the hierarchical metadata manager, to bind source key-value objects from one or more physical placements based on the logical-to-physical mappings, to determine any required transform path associated with the bound source key-value objects, to validate the bound source key-value objects against a current version state before execution, and to generate an execution-ready output for a compute unit by assembling the bound source key-value objects in a deterministic order determined by a gather plan for the inference step; and
    a compute interface configured to provide the execution-ready output to an attention operator or related neural network compute operator without requiring the compute operator to traverse the hierarchical metadata manager directly.
 
 2. The system as claimed in claim 1, wherein the execution-ready output comprises one or more materialized tiles or buffers arranged for direct consumption by the compute unit.
@@ -769,8 +769,8 @@ The following draft claims are intended for later complete-specification develop
 
 29. A distributed inference system comprising:
    a plurality of accelerators or nodes;
-   a distributed ownership manager configured to maintain a global logical namespace for key-value objects across the plurality of accelerators or nodes; and
-   at least one deterministic gather engine configured to resolve, for an inference step, a set of shared prefix objects and branch-local suffix objects from local or remote sources, to validate source descriptors against current version information, and to generate an execution-ready output therefrom.
+   a distributed ownership manager configured to maintain a global logical namespace for key-value objects across the plurality of accelerators or nodes and to maintain, for at least a subset of the key-value objects, distributed ownership records indicating an owner accelerator or node, one or more replica accelerators or nodes, and associated version or epoch information; and
+   at least one deterministic gather engine configured to resolve, for an inference step, a set of shared prefix objects and branch-local suffix objects from local or remote sources, to validate source descriptors against the version or epoch information maintained by the distributed ownership manager, and to generate an execution-ready output therefrom.
 
 30. The distributed inference system as claimed in claim 29, wherein the distributed ownership manager maintains freshness information for an owner copy and one or more replica copies of a key-value object.
 
@@ -782,6 +782,7 @@ The following draft claims are intended for later complete-specification develop
 - Claim Set B is intended as a stronger fallback set emphasizing epoch validation, source rebinding, and execution-plan integrity.
 - Claim Set C is intended as a narrower fallback set tied to descriptor records, epoch change handling, representation transforms, and distributed replica control.
 - Claims directed only to blockized KV storage, paging, prompt reuse, tiering, or compression without the deterministic gather path should not bear the novelty burden.
+- A hardware-oriented claim directed to an accelerator, system-on-chip, or hardware-implemented gather engine may be added in a later complete-specification or foreign filing set if hardware portfolio coverage is desired.
 
 ## Part III: Patent Drawing Instruction Pack
 
@@ -1032,11 +1033,13 @@ Figure type:
 Required content:
 - Show a compiled gather plan validated against current epoch state.
 - Show detection of a stale source descriptor for one or more segments.
-- Show segment-level rebind to a replacement source descriptor or fallback plan regeneration.
+- Show a first branch in which an affected segment is rebound to a replacement source descriptor.
+- Show a second branch in which the gather plan is regenerated as a fallback path.
 - Show preservation of deterministic segment ordering after rebind.
 
 Drafting note:
 - This figure should be treated as a priority figure because it supports the claim emphasis on epoch validation and rebind during deterministic gather.
+- The illustrator should depict the rebind branch and the plan-regeneration branch as distinct alternatives in the validation flow.
 
 ### Figure 16: Compressed-Cold-to-Warm Promotion Path
 
@@ -1407,7 +1410,7 @@ The strongest system claim should therefore require a deterministic gather engin
 - resolve logically managed KV objects,
 - bind and validate sources,
 - determine transform paths,
-- assemble execution-ready output in a predetermined order,
+- assemble execution-ready output in a deterministic order determined by the gather plan,
 - and provide that output to compute without direct metadata traversal by the compute kernel.
 
 ## Claim-Drafting Consequences

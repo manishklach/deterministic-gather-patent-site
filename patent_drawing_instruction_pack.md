@@ -245,11 +245,13 @@ Figure type:
 Required content:
 - Show a compiled gather plan validated against current epoch state.
 - Show detection of a stale source descriptor for one or more segments.
-- Show segment-level rebind to a replacement source descriptor or fallback plan regeneration.
+- Show a first branch in which an affected segment is rebound to a replacement source descriptor.
+- Show a second branch in which the gather plan is regenerated as a fallback path.
 - Show preservation of deterministic segment ordering after rebind.
 
 Drafting note:
 - This figure should be treated as a priority figure because it supports the claim emphasis on epoch validation and rebind during deterministic gather.
+- The illustrator should depict the rebind branch and the plan-regeneration branch as distinct alternatives in the validation flow.
 
 ### Figure 16: Compressed-Cold-to-Warm Promotion Path
 
