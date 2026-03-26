@@ -1,17 +1,17 @@
 :root {
-  --bg: #071019;
-  --bg-top: #040a10;
-  --surface: rgba(11, 20, 29, 0.82);
-  --surface-strong: rgba(14, 24, 35, 0.94);
-  --surface-soft: rgba(255, 255, 255, 0.02);
-  --text: #edf3f7;
-  --text-muted: #afbcc7;
-  --text-soft: #8293a0;
-  --line: rgba(154, 178, 194, 0.14);
-  --line-strong: rgba(154, 178, 194, 0.24);
-  --accent: #90bfcb;
-  --accent-soft: #c4dee5;
-  --shadow: 0 28px 72px rgba(0, 0, 0, 0.28);
+  --bg: #f3efe8;
+  --bg-top: #faf7f1;
+  --surface: rgba(255, 252, 247, 0.86);
+  --surface-strong: rgba(255, 253, 249, 0.98);
+  --surface-soft: rgba(41, 52, 63, 0.025);
+  --text: #1d2329;
+  --text-muted: #626d77;
+  --text-soft: #7b8792;
+  --line: rgba(45, 55, 66, 0.10);
+  --line-strong: rgba(45, 55, 66, 0.18);
+  --accent: #5d7d8d;
+  --accent-soft: #4d6f7e;
+  --shadow: 0 20px 50px rgba(42, 34, 26, 0.08);
   --radius: 22px;
   --radius-sm: 16px;
   --max-width: 1120px;
@@ -34,9 +34,9 @@ body {
   min-width: 320px;
   color: var(--text);
   background:
-    radial-gradient(circle at 0% 0%, rgba(121, 155, 170, 0.12), transparent 24%),
-    radial-gradient(circle at 100% 8%, rgba(93, 126, 143, 0.08), transparent 26%),
-    linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 44%, #08141d 100%);
+    radial-gradient(circle at 0% 0%, rgba(123, 145, 159, 0.10), transparent 22%),
+    radial-gradient(circle at 100% 10%, rgba(110, 132, 148, 0.07), transparent 24%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 44%, #ede7de 100%);
   font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.65;
 }
@@ -72,9 +72,9 @@ a {
   gap: 24px;
   min-height: var(--nav-height);
   padding: 14px 0;
-  background: linear-gradient(180deg, rgba(7, 16, 25, 0.92), rgba(7, 16, 25, 0.72));
+  background: linear-gradient(180deg, rgba(250, 247, 241, 0.92), rgba(250, 247, 241, 0.82));
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(154, 178, 194, 0.08);
+  border-bottom: 1px solid rgba(45, 55, 66, 0.08);
 }
 
 .brand {
@@ -209,13 +209,13 @@ h3 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, rgba(144, 191, 203, 0.18), rgba(126, 172, 186, 0.28));
-  border-color: rgba(144, 191, 203, 0.28);
+  background: linear-gradient(135deg, rgba(93, 125, 141, 0.12), rgba(93, 125, 141, 0.18));
+  border-color: rgba(93, 125, 141, 0.24);
   color: var(--text);
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.62);
   border-color: var(--line);
   color: var(--text);
 }
@@ -270,7 +270,7 @@ h3 {
 .scope-note {
   margin: 26px 0 0;
   padding-left: 18px;
-  border-left: 2px solid rgba(144, 191, 203, 0.28);
+  border-left: 2px solid rgba(93, 125, 141, 0.24);
   font-size: 0.96rem;
 }
 
