@@ -39,72 +39,63 @@
       </nav>
     </header>
 
-    <main>
+    <main class="page">
       <section class="hero section" id="overview">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Patent Publication Companion Page</p>
-            <h1>Deterministic Gather for Live Inference State</h1>
-            <p class="hero-subtitle">
-              Systems and methods for deterministic gather of hierarchically managed key-value state for autoregressive neural network inference.
-            </p>
-            <p class="hero-thesis">
-              This invention treats KV state as logically managed shared state rather than a flat tensor, and introduces a deterministic gather path that converts irregular, tiered, shared, and format-diverse live inference state into execution-ready artifacts for downstream compute.
-            </p>
+        <p class="eyebrow">Patent Publication Companion Page</p>
+        <h1>Deterministic Gather for Live Inference State</h1>
+        <p class="hero-subtitle">
+          Systems and methods for deterministic gather of hierarchically managed key-value state for autoregressive neural network inference.
+        </p>
+        <p class="hero-thesis">
+          This invention treats KV state as logically managed shared state rather than a flat tensor, and introduces a deterministic gather path that converts irregular, tiered, shared, and format-diverse live inference state into execution-ready artifacts for downstream compute.
+        </p>
 
-            <div class="hero-actions">
-              <a class="button button-primary" href="./india_provisional_filing_master.html" target="_blank" rel="noopener">View Patent Specification</a>
-              <a class="button button-secondary" href="#architecture">View Architecture</a>
-              <a class="button button-tertiary" href="#artifacts">View Materials</a>
-            </div>
-          </div>
-
-          <aside class="hero-panel card">
-            <div class="hero-panel-head">
-              <p class="panel-kicker">Publication Metadata</p>
-              <span class="status-pill">Published</span>
-            </div>
-            <div class="metadata-grid" aria-label="Publication metadata">
-              <div class="metadata-item">
-                <span>Status</span>
-                <strong>Published</strong>
-              </div>
-              <div class="metadata-item">
-                <span>Jurisdiction</span>
-                <strong>[Jurisdiction]</strong>
-              </div>
-              <div class="metadata-item">
-                <span>Publication / Filing Type</span>
-                <strong>Published Patent Application</strong>
-              </div>
-              <div class="metadata-item">
-                <span>Year</span>
-                <strong>2026</strong>
-              </div>
-              <div class="metadata-item">
-                <span>Domain</span>
-                <strong>Inference Systems</strong>
-              </div>
-              <div class="metadata-item">
-                <span>Category</span>
-                <strong>Memory / Runtime Architecture</strong>
-              </div>
-            </div>
-            <div class="panel-divider"></div>
-            <p class="hero-panel-copy">
-              The architecture is not framed as larger local memory, generic caching, compression in isolation, or paged KV allocation alone. Residency-first hierarchical management supplies the control substrate. Deterministic gather is the operative path.
-            </p>
-          </aside>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./india_provisional_filing_master.html" target="_blank" rel="noopener">View Patent Specification</a>
+          <a class="button button-secondary" href="#architecture">Explore Architecture</a>
+          <a class="button button-secondary" href="#artifacts">Technical Artifacts</a>
         </div>
+
+        <div class="metadata-strip" aria-label="Publication metadata">
+          <div class="metadata-item">
+            <span>Publication Status</span>
+            <strong>Published</strong>
+          </div>
+          <div class="metadata-item">
+            <span>Jurisdiction</span>
+            <strong>[Jurisdiction]</strong>
+          </div>
+          <div class="metadata-item">
+            <span>Publication Type</span>
+            <strong>Published Patent Application</strong>
+          </div>
+          <div class="metadata-item">
+            <span>Year</span>
+            <strong>2026</strong>
+          </div>
+          <div class="metadata-item">
+            <span>Domain</span>
+            <strong>Inference Systems</strong>
+          </div>
+          <div class="metadata-item">
+            <span>Category</span>
+            <strong>Memory / Runtime Architecture</strong>
+          </div>
+        </div>
+
+        <p class="scope-note">
+          Publication Scope: This site is a technical companion to the published patent materials. It presents the architectural problem, the deterministic gather thesis, representative figures, and linked source documents in browser-friendly form.
+        </p>
       </section>
+
+      <div class="section-rule" aria-hidden="true"></div>
 
       <section class="section" id="problem">
         <div class="section-heading">
-          <p class="eyebrow">Problem</p>
-          <h2>Inference state becomes the systems problem</h2>
+          <p class="eyebrow">The Problem</p>
+          <h2>Inference-state preparation becomes the critical path</h2>
         </div>
-
-        <div class="two-column">
+        <div class="narrative-grid">
           <div class="section-copy">
             <p>
               Long-context autoregressive inference places increasing pressure on key-value state management. Historical KV grows with context length, session count, branch count, and resumability requirements. In deployed serving systems, the limiting problem is often preparation of historical state for arithmetic rather than arithmetic alone.
@@ -113,29 +104,28 @@
               Conventional approaches duplicate shared prefixes, depend on incidental cache locality, or store history in flat per-sequence tensors that are difficult to share, relocate, compress, migrate, or reconstitute predictably. As state fragments across tiers and formats, execution preparation becomes irregular.
             </p>
           </div>
-
-          <div class="problem-grid">
-            <article class="card compact-card">
+          <div class="issue-list">
+            <article class="issue-item">
               <h3>Long-context pressure</h3>
               <p>KV footprint grows faster than preferred hot-tier capacity.</p>
             </article>
-            <article class="card compact-card">
+            <article class="issue-item">
               <h3>Redundant retrieval</h3>
               <p>Shared prompt history is repeatedly materialized or recomputed.</p>
             </article>
-            <article class="card compact-card">
+            <article class="issue-item">
               <h3>Generic caching limits</h3>
               <p>Implicit locality mechanisms do not understand sequence lineage, branch value, or gather-criticality.</p>
             </article>
-            <article class="card compact-card">
+            <article class="issue-item">
               <h3>Tier fragmentation</h3>
               <p>Historical state spreads across local, package, host, and remote memory tiers.</p>
             </article>
-            <article class="card compact-card">
+            <article class="issue-item">
               <h3>Execution unpredictability</h3>
               <p>Irregular state must still be converted into a stable execution contract.</p>
             </article>
-            <article class="card compact-card">
+            <article class="issue-item">
               <h3>Shared-state control gap</h3>
               <p>Prefix sharing, branch divergence, and resumable sessions are poorly represented by flat storage models.</p>
             </article>
@@ -146,19 +136,18 @@
       <section class="section" id="core-invention">
         <div class="section-heading">
           <p class="eyebrow">Core Invention</p>
-          <h2>Deterministic gather as the architectural center</h2>
+          <h2>Deterministic gather is the center. Hierarchical residency is the enabling substrate.</h2>
         </div>
-
-        <div class="triple-grid">
-          <article class="card feature-card">
+        <div class="feature-list">
+          <article class="feature-item">
             <h3>Logical KV objects</h3>
             <p>KV state is treated as logically managed live inference state. Objects are named independently of current physical placement and may be shared across sessions or branches.</p>
           </article>
-          <article class="card feature-card">
+          <article class="feature-item">
             <h3>Residency-first hierarchy</h3>
             <p>A hierarchical metadata plane tracks ownership, placement, representation, version state, and tier residency. This plane is the substrate that makes deterministic gather correct and policy-governed.</p>
           </article>
-          <article class="card feature-card">
+          <article class="feature-item">
             <h3>Execution-ready generation</h3>
             <p>A deterministic gather engine resolves logically distributed state and emits execution-ready tiles, staged buffers, stream descriptors, DMA chains, or front-end command structures for downstream compute.</p>
           </article>
@@ -166,7 +155,7 @@
       </section>
 
       <section class="section bridge-section" id="bridge">
-        <div class="bridge-card card">
+        <div class="bridge-block">
           <p class="eyebrow">Why Deterministic Gather Matters</p>
           <h2>Storage is not the whole problem; preparation is.</h2>
           <p>
@@ -177,59 +166,59 @@
 
       <section class="section architecture-section" id="architecture">
         <div class="section-heading">
-          <p class="eyebrow">Architecture Overview</p>
-          <h2>Control-plane resolution, data-plane preparation</h2>
+          <p class="eyebrow">Architecture</p>
+          <h2>Preparing logically managed KV state for execution</h2>
         </div>
 
-        <div class="architecture-layout">
-          <figure class="diagram-frame card">
-            <div class="figure-stage">
-              <img src="./assets/architecture-overview.svg" alt="Architecture overview diagram for deterministic gather and hierarchical KV management">
-            </div>
-            <figcaption class="figure-caption">
-              Representative architecture view of control-plane resolution, gather-plan compilation, and execution-ready output generation.
-            </figcaption>
-            <div class="figure-meta" aria-label="Figure metadata">
-              <div><span>Figure</span><strong>Architecture Overview</strong></div>
-              <div><span>Scope</span><strong>Control plane / data plane</strong></div>
-              <div><span>Focus</span><strong>Deterministic gather path</strong></div>
-            </div>
-          </figure>
+        <div class="section-copy architecture-intro">
+          <p>
+            The architecture separates control-plane resolution from compute consumption. Hierarchical metadata resolves logical identity, ownership, tier placement, representation, and version state. Deterministic gather then compiles a concrete execution path that regularizes irregular live state into a form that kernels can consume without metadata traversal.
+          </p>
+        </div>
 
-          <div class="architecture-copy">
-            <p>
-              The architecture separates control-plane resolution from compute consumption. Hierarchical metadata resolves logical identity, ownership, tier placement, representation, and version state. Deterministic gather then compiles a concrete execution path that regularizes irregular live state into a form that kernels can consume without metadata traversal.
-            </p>
-
-            <div class="subsystem-list">
-              <article class="subsystem-item">
-                <h3>Hierarchical Metadata Manager</h3>
-                <p>Maintains logical identity, source descriptors, epochs, and residency records.</p>
-              </article>
-              <article class="subsystem-item">
-                <h3>Prefix / Branch Ownership Manager</h3>
-                <p>Represents shared lineage, divergence boundaries, and branch-local suffix ownership.</p>
-              </article>
-              <article class="subsystem-item">
-                <h3>Residency Controller</h3>
-                <p>Places objects across hot, warm, cold, and optional remote tiers under explicit policy.</p>
-              </article>
-              <article class="subsystem-item">
-                <h3>Compression / Representation Manager</h3>
-                <p>Tracks representation class, transform path, and tier-appropriate storage form.</p>
-              </article>
-              <article class="subsystem-item">
-                <h3>Deterministic Gather Engine</h3>
-                <p>Compiles gather plans, binds sources, schedules overlap, and emits execution-ready output.</p>
-              </article>
-              <article class="subsystem-item">
-                <h3>Compute Interface</h3>
-                <p>Supplies normalized tiles or descriptor-form execution artifacts to downstream attention compute.</p>
-              </article>
-            </div>
+        <figure class="figure-frame">
+          <div class="figure-stage">
+            <img src="./assets/architecture-overview.svg" alt="Architecture overview diagram for deterministic gather and hierarchical KV management">
           </div>
+          <figcaption class="figure-caption">
+            Representative architecture view of control-plane resolution, gather-plan compilation, and execution-ready output generation.
+          </figcaption>
+          <div class="figure-meta" aria-label="Figure metadata">
+            <div><span>Figure</span><strong>Architecture Overview</strong></div>
+            <div><span>Scope</span><strong>Control plane / data plane</strong></div>
+            <div><span>Focus</span><strong>Deterministic gather path</strong></div>
+          </div>
+        </figure>
+
+        <div class="systems-grid">
+          <article class="system-item">
+            <h3>Hierarchical Metadata Manager</h3>
+            <p>Maintains logical identity, source descriptors, epochs, and residency records.</p>
+          </article>
+          <article class="system-item">
+            <h3>Prefix / Branch Ownership Manager</h3>
+            <p>Represents shared lineage, divergence boundaries, and branch-local suffix ownership.</p>
+          </article>
+          <article class="system-item">
+            <h3>Residency Controller</h3>
+            <p>Places objects across hot, warm, cold, and optional remote tiers under explicit policy.</p>
+          </article>
+          <article class="system-item">
+            <h3>Compression / Representation Manager</h3>
+            <p>Tracks representation class, transform path, and tier-appropriate storage form.</p>
+          </article>
+          <article class="system-item">
+            <h3>Deterministic Gather Engine</h3>
+            <p>Compiles gather plans, binds sources, schedules overlap, and emits execution-ready output.</p>
+          </article>
+          <article class="system-item">
+            <h3>Compute Interface</h3>
+            <p>Supplies normalized tiles or descriptor-form execution artifacts to downstream attention compute.</p>
+          </article>
         </div>
       </section>
+
+      <div class="section-rule" aria-hidden="true"></div>
 
       <section class="section" id="why-it-matters">
         <div class="section-heading">
@@ -237,28 +226,34 @@
           <h2>Architectural significance in deployed inference systems</h2>
         </div>
 
-        <div class="card-grid six-up">
-          <article class="card technical-card">
+        <div class="reason-grid">
+          <article class="reason-item">
+            <span class="reason-index">01</span>
             <h3>Long-context serving</h3>
             <p>Historical state can remain logically available without forcing uniform hot-tier residency.</p>
           </article>
-          <article class="card technical-card">
+          <article class="reason-item">
+            <span class="reason-index">02</span>
             <h3>Multi-session inference</h3>
             <p>Shared prompt regions can be referenced as common logical objects rather than duplicated state.</p>
           </article>
-          <article class="card technical-card">
+          <article class="reason-item">
+            <span class="reason-index">03</span>
             <h3>Shared prompt reuse</h3>
             <p>Prefix sharing becomes a state-management operation with direct execution consequences.</p>
           </article>
-          <article class="card technical-card">
+          <article class="reason-item">
+            <span class="reason-index">04</span>
             <h3>Resumable sessions</h3>
             <p>Logical identity persists even when state migrates across tiers or representations.</p>
           </article>
-          <article class="card technical-card">
+          <article class="reason-item">
+            <span class="reason-index">05</span>
             <h3>QoS-aware placement</h3>
             <p>Policy can prioritize latency-sensitive sessions and gather-critical regions explicitly.</p>
           </article>
-          <article class="card technical-card">
+          <article class="reason-item">
+            <span class="reason-index">06</span>
             <h3>Distributed support</h3>
             <p>Remote ownership and local replication decisions can be integrated into the same gather path.</p>
           </article>
@@ -271,7 +266,7 @@
           <h2>What this is not</h2>
         </div>
 
-        <div class="comparison-table card">
+        <div class="comparison-table">
           <div class="comparison-head">
             <div>Approach</div>
             <div>Limitation</div>
@@ -316,36 +311,48 @@
           <h2>From logical request to execution-ready output</h2>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-step card">
-            <span class="timeline-index">01</span>
-            <h3>Logical state request</h3>
-            <p>An inference step identifies the historical KV state required by the downstream attention operator.</p>
+        <div class="flow-list">
+          <article class="flow-step">
+            <span class="flow-index">01</span>
+            <div>
+              <h3>Logical state request</h3>
+              <p>An inference step identifies the historical KV state required by the downstream attention operator.</p>
+            </div>
           </article>
-          <article class="timeline-step card">
-            <span class="timeline-index">02</span>
-            <h3>Metadata resolution</h3>
-            <p>Logical identity, ownership lineage, tier placement, representation class, and version state are resolved through the control plane.</p>
+          <article class="flow-step">
+            <span class="flow-index">02</span>
+            <div>
+              <h3>Metadata resolution</h3>
+              <p>Logical identity, ownership lineage, tier placement, representation class, and version state are resolved through the control plane.</p>
+            </div>
           </article>
-          <article class="timeline-step card">
-            <span class="timeline-index">03</span>
-            <h3>Gather-plan compilation</h3>
-            <p>Source descriptors are bound, transform paths are selected, and segment ordering is compiled into a deterministic gather plan.</p>
+          <article class="flow-step">
+            <span class="flow-index">03</span>
+            <div>
+              <h3>Gather-plan compilation</h3>
+              <p>Source descriptors are bound, transform paths are selected, and segment ordering is compiled into a deterministic gather plan.</p>
+            </div>
           </article>
-          <article class="timeline-step card">
-            <span class="timeline-index">04</span>
-            <h3>Mixed-tier retrieval</h3>
-            <p>Hot-tier reads, warm-tier transfers, cold-tier fetches, optional remote sources, and transforms are overlapped under plan control.</p>
+          <article class="flow-step">
+            <span class="flow-index">04</span>
+            <div>
+              <h3>Mixed-tier retrieval</h3>
+              <p>Hot-tier reads, warm-tier transfers, cold-tier fetches, optional remote sources, and transforms are overlapped under plan control.</p>
+            </div>
           </article>
-          <article class="timeline-step card">
-            <span class="timeline-index">05</span>
-            <h3>Execution-ready generation</h3>
-            <p>The gather path emits a regular artifact: materialized tile, staged buffer, stream descriptor, DMA chain, or command structure.</p>
+          <article class="flow-step">
+            <span class="flow-index">05</span>
+            <div>
+              <h3>Execution-ready generation</h3>
+              <p>The gather path emits a regular artifact: materialized tile, staged buffer, stream descriptor, DMA chain, or command structure.</p>
+            </div>
           </article>
-          <article class="timeline-step card">
-            <span class="timeline-index">06</span>
-            <h3>Compute consumption</h3>
-            <p>The compute unit receives normalized input without direct traversal of the metadata hierarchy.</p>
+          <article class="flow-step">
+            <span class="flow-index">06</span>
+            <div>
+              <h3>Compute consumption</h3>
+              <p>The compute unit receives normalized input without direct traversal of the metadata hierarchy.</p>
+            </div>
           </article>
         </div>
 
@@ -359,55 +366,55 @@
         </div>
 
         <div class="artifact-grid">
-          <a class="card artifact-card" href="./india_provisional_filing_master.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./india_provisional_filing_master.html" target="_blank" rel="noopener">
             <span class="artifact-type">Document</span>
             <h3>Provisional Filing Specification</h3>
             <p>Browser-friendly view of the filing-oriented provisional specification centered on deterministic gather of logically managed KV state.</p>
             <span class="artifact-action">Open document</span>
           </a>
-          <a class="card artifact-card" href="./patent_master_dossier.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./patent_master_dossier.html" target="_blank" rel="noopener">
             <span class="artifact-type">Document</span>
             <h3>Patent Master Dossier</h3>
             <p>Consolidated internal dossier including specification, strategic notes, and related drafting materials.</p>
             <span class="artifact-action">Open document</span>
           </a>
-          <a class="card artifact-card" href="./assets/architecture-overview.svg" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./assets/architecture-overview.svg" target="_blank" rel="noopener">
             <span class="artifact-type">Figure</span>
             <h3>Architecture Overview</h3>
             <p>Representative system view of control-plane resolution, gather planning, and execution-ready generation.</p>
             <span class="artifact-action">View figure</span>
           </a>
-          <a class="card artifact-card" href="./assets/gather-flow.svg" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./assets/gather-flow.svg" target="_blank" rel="noopener">
             <span class="artifact-type">Figure</span>
             <h3>Gather Flow</h3>
             <p>Execution-preparation flow from logical state request to execution-ready output.</p>
             <span class="artifact-action">View figure</span>
           </a>
-          <a class="card artifact-card" href="./patent_drawing_instruction_pack.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./patent_drawing_instruction_pack.html" target="_blank" rel="noopener">
             <span class="artifact-type">Document</span>
             <h3>Drawing Instruction Pack</h3>
             <p>Figure-by-figure patent drawing guidance, reference numerals, and commissioning priorities.</p>
             <span class="artifact-action">Open document</span>
           </a>
-          <a class="card artifact-card" href="./complete_spec_claims_draft.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./complete_spec_claims_draft.html" target="_blank" rel="noopener">
             <span class="artifact-type">Document</span>
             <h3>Claims Draft</h3>
             <p>Companion claims draft covering broad, fallback, and prosecution-oriented claim positions.</p>
             <span class="artifact-action">Open document</span>
           </a>
-          <a class="card artifact-card" href="./assets/figures/index.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./assets/figures/index.html" target="_blank" rel="noopener">
             <span class="artifact-type">Figure Set</span>
             <h3>Supplementary Figures</h3>
             <p>Bundled architecture, ownership, residency, and gather-flow diagrams for publication use.</p>
             <span class="artifact-action">Open figures</span>
           </a>
-          <a class="card artifact-card" href="./worldwide_prior_art_report.html" target="_blank" rel="noopener">
+          <a class="artifact-card" href="./worldwide_prior_art_report.html" target="_blank" rel="noopener">
             <span class="artifact-type">Report</span>
             <h3>Worldwide Prior-Art Report</h3>
             <p>Structured review of worldwide prior-art considerations relevant to deterministic gather and hierarchical KV management.</p>
             <span class="artifact-action">Open report</span>
           </a>
-          <a class="card artifact-card" href="https://github.com/manishklach/deterministic-gather-patent-site" target="_blank" rel="noopener">
+          <a class="artifact-card" href="https://github.com/manishklach/deterministic-gather-patent-site" target="_blank" rel="noopener">
             <span class="artifact-type">Repository</span>
             <h3>Project Repository</h3>
             <p>Static site source and technical publication companion materials.</p>
@@ -431,7 +438,3 @@
   <script src="./script.js"></script>
 </body>
 </html>
-
-
-
-

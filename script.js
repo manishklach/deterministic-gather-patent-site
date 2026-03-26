@@ -1,6 +1,10 @@
 const navLinks = Array.from(document.querySelectorAll('.nav a'));
 const sections = Array.from(document.querySelectorAll('main section[id]'));
-const revealTargets = Array.from(document.querySelectorAll('.card, .section-heading, .timeline-step'));
+const revealTargets = Array.from(
+  document.querySelectorAll(
+    '.section-heading, .metadata-item, .issue-item, .feature-item, .bridge-block, .figure-frame, .system-item, .reason-item, .comparison-table, .flow-step, .artifact-card'
+  )
+);
 const yearNode = document.getElementById('year');
 
 if (yearNode) {
