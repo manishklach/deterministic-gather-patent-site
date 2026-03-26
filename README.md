@@ -1,4 +1,4 @@
-# Patent Publication Companion Site
+﻿# Patent Publication Companion Site
 
 This repository contains a plain HTML, CSS, and JavaScript GitHub Pages site for a patent publication companion page centered on deterministic gather over logically managed live inference state.
 
@@ -200,3 +200,4 @@ It is deliberately not:
 - a pricing page
 - a generic portfolio
 - a marketing-heavy product site
+
